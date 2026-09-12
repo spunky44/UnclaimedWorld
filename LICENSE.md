@@ -2,6 +2,7 @@ UNCLAIMED WORLD COMMUNITY LICENSE
 Version 1.0
 
 Copyright © 2016–2026 Refactored Games
+
 Founders: Lars Pedersen and Morten Pedersen
 
 This license applies to the source code, game assets, and other materials
