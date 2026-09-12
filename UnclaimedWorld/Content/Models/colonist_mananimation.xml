@@ -1,0 +1,29 @@
+﻿<animation>
+  <name>Take 001</name>
+  <tickspersecond>25</tickspersecond>
+  <animationsubset>
+    <name>walk</name>
+    <startframe>113</startframe>
+    <endframe>156</endframe>
+  </animationsubset>
+  <animationsubset>
+    <name>idle</name>
+    <startframe>160</startframe>
+    <endframe>543</endframe>
+  </animationsubset>
+  <animationsubset>
+    <name>haul</name>
+    <startframe>111</startframe>
+    <endframe>158</endframe>
+  </animationsubset>
+  <animationsubset>
+    <name>smoke</name>
+    <startframe>160</startframe>
+    <endframe>543</endframe>
+  </animationsubset>
+  <animationsubset>
+    <name>mend</name>
+    <startframe>546</startframe>
+    <endframe>700</endframe>
+  </animationsubset>
+</animation>

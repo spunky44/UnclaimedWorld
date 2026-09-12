@@ -1,0 +1,3918 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin
+/intermediateDir:obj
+/platform:Windows
+/config:
+/profile:HiDef
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\SpriteSheetPipeline\bin\Debug\SpriteSheetPipeline.dll
+/reference:..\..\SpriteEffectsPipeline\bin\x64\Debug\SpriteEffectsPipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Models/bushback_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=bushback_gaitWalk; bushback_eat; bushback_hide; bushback_collapse; bushback_dead
+/build:Models/bushback_idle.fbx
+
+#begin Models/spikePlant_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=spikePlant_attack; spikePlant_combatIdle; spikePlant_dead; spikePlant_collapse; spikePlant_hit
+/build:Models/spikePlant_idle.fbx
+
+#begin Models/watergun.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/watergun.fbx
+
+#begin Sounds/activities/weapons/arrowImpact1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/arrowImpact1a.wav
+
+#begin TimeOfDayAndLightsources.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:TimeOfDayAndLightsources.fx
+
+#begin alphaTex.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:alphaTex.png
+
+#begin Arial.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Arial.spritefont
+
+#begin explosion.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:explosion.png
+
+#begin multiTex.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:multiTex.fx
+
+#begin perlin.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:perlin.png
+
+#begin skinFX.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:skinFX.fx
+
+#begin smoke.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:smoke.bmp
+
+#begin SpriteFont1.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:SpriteFont1.spritefont
+
+#begin GameThumbnail.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GameThumbnail.png
+
+#begin BuildingsAndTrees.xml
+/importer:XmlImporter
+/processor:ExtendedSpriteSheetProcessor
+/processorParam:Action=None
+/build:BuildingsAndTrees.xml
+
+#begin TimeOfDay_Alpha.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:TimeOfDay_Alpha.xml
+
+#begin TimeOfDay_Blue.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:TimeOfDay_Blue.xml
+
+#begin TimeOfDay_Greens.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:TimeOfDay_Greens.xml
+
+#begin TimeOfDay_Reds.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:TimeOfDay_Reds.xml
+
+#begin structureBillboards/whiteFace.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:structureBillboards/whiteFace.jpg
+
+#begin water.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:water.fx
+
+#begin cloudMap.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:cloudMap.jpg
+
+#begin BloomCombine.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:BloomCombine.fx
+
+#begin BloomExtract.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:BloomExtract.fx
+
+#begin GaussianBlur.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:GaussianBlur.fx
+
+#begin Vehicle.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Vehicle.fx
+
+#begin seattle.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:seattle.bmp
+
+#begin Billboard.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Billboard.fx
+
+#begin perlin_2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:perlin_2.png
+
+#begin terrain/t_earth_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_earth_base.png
+
+#begin EdgeDetect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:EdgeDetect.fx
+
+#begin DevShape.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:DevShape.fx
+
+#begin FlatSprites.xml
+/importer:XmlImporter
+/processor:SpriteSheetProcessor
+/processorParam:Action=None
+/processorParam:ProcessGroundSprites=True
+/processorParam:ProcessOrdinarySprites=False
+/build:FlatSprites.xml
+
+#begin LightSources.xml
+/importer:XmlImporter
+/processor:LightSourceSpriteSheetProcessor
+/build:LightSources.xml
+
+#begin LightSourcesEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:LightSourcesEffect.fx
+
+#begin MapData/treeSpeciesMap.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MapData/treeSpeciesMap.png
+
+#begin CloudShadows.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:CloudShadows.fx
+
+#begin clouds.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:clouds.png
+
+#begin waterbump.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:waterbump.png
+
+#begin CloudShadowTexture4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:CloudShadowTexture4.png
+
+#begin MapData/treeDensityMap.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MapData/treeDensityMap.png
+
+#begin GUI/CRT_Dropshadow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/CRT_Dropshadow.png
+
+#begin GUI/CRT_Grunge_v2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/CRT_Grunge_v2.png
+
+#begin GUI/CRT_Lamp_reflections.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/CRT_Lamp_reflections.png
+
+#begin GUI/CRT_ScanLines.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/CRT_ScanLines.png
+
+#begin GUI/CRT.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:GUI/CRT.fx
+
+#begin GUI/LCD.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:GUI/LCD.fx
+
+#begin Models/turnip_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=turnip_gaitWalk; turnip_hide; turnip_tentaclesLooking
+/build:Models/turnip_idle.fbx
+
+#begin Models/turnip_texture128.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/turnip_texture128.tga
+
+#begin Models/patrician_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=patrician_gaitWalk; patrician_combatIdle; patrician_attackHighDouble; patrician_attackLowRight; patrician_hit; patrician_collapse; patrician_dying; patrician_dead; patrician_eat
+/build:Models/patrician_idle.fbx
+
+#begin Models/twinkler_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=twinkler_gaitWalk; twinkler_attackHighRight; twinkler_attackLowRight; twinkler_dying; twinkler_hit; twinkler_dead; twinkler_eat
+/build:Models/twinkler_idle.fbx
+
+#begin Models/meshtest.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/meshtest.fbx
+
+#begin Models/skinnedtest_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=dog_attack; dog_collapse; dog_combatIdle; dog_dead; dog_eat; dog_gaitGallop; dog_hit; dog_idleHowl; dog_gaitTrot; dog_gaitWalk; dog_lying; dog_sleep; dog_lyingToStand; dog_standToLying;
+/build:Models/skinnedtest_idle.fbx
+
+#begin Models/bird_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=bird_walk
+/build:Models/bird_idle.fbx
+
+#begin Models/hammer.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/hammer.fbx
+
+#begin Models/thunderChicken_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=thunderChicken_gaitWalk; thunderChicken_eat; thunderChicken_look; thunderChicken_hidden; thunderChicken_dead; thunderChicken_dying
+/build:Models/thunderChicken_idle.fbx
+
+#begin Models/backpack.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/backpack.fbx
+
+#begin Models/rifle.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/rifle.fbx
+
+#begin Models/spear.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/spear.fbx
+
+#begin Models/armsling.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/armsling.fbx
+
+#begin Models/tentacle_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/build:Models/tentacle_idle.fbx
+
+#begin Models/woman_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=man_armslingright; man_attackClubHigh; man_attackHoeMid; man_attackPickaxe; man_attackPunchHighRight; man_attackPunchLowRight; man_attackPunchRightMiss; man_attackSnapkickRight; man_attackSpearMid; man_attackStompRight; man_chopLow; man_combatBowAim; man_combatBowReload; man_combatCollapse; man_combatHit; man_combatIdleBow; man_combatIdleRifle; man_combatIdleSpear; man_combatIdleUnarmed; man_combatRifleAim; man_combatRifleAimHip; man_combatRifleReload; man_combatSpearThrow; man_combatWatergunReload; man_constructPull; man_cutLow; man_dead; man_driving; man_dropEquipped; man_dropHeavy; man_dropLight; man_dropLightSame; man_dropMounted; man_dropMountedSame; man_dying; man_eat; man_exult; man_fishingHook; man_fishingSpearIdle; man_fishingSpearThrustMiss; man_gaitFatiguedWalk; man_gaitJog; man_gaitLimpWalk; man_gaitRun; man_gaitSlowWalk; man_gaitSneak; man_gaitStoop; man_gaitStroll; man_gaitWalk; man_gather; man_gatherStand; man_hammering; man_haulHeavy; man_haulLight; man_haulHeavyBack; man_idleHandsOnHips; man_idleLong; man_idleMosquito; man_idlePanting; man_idleStretchesBody; man_idleStretchesNeck; man_idleSweat; man_idleTalkArgue; man_idleTalkShort; man_idleToKneel; man_idleToSitting; man_idleToSleep; man_idleWipesNose; man_kneel; man_kneelCollectSoil; man_kneelDig; man_kneelExamineSoil; man_kneelShieldEyes; man_kneelTablet; man_kneelToIdle; man_kneelToSitting; man_kneelWaterDevice; man_mend; man_passenger1Seated; man_passenger2LyingLeft; man_passenger3LyingRight; man_pickaxe; man_pickupEquipped; man_pickupHeavy; man_pickupLight; man_pickupLightSame; man_pickupMounted; man_pickupMountedEquipped; man_scout; man_shoo; man_shovel; man_sittingAttentive; man_sittingIdle; man_sittingMend; man_sittingTablet; man_sittingToIdle; man_sleep; man_sleepToIdle; man_sleepToSitting; man_sneak; man_standingMend; man_startled; man_useHoe;
+/build:Models/woman_idle.fbx
+
+#begin Models/scarecrow_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=scarecrow_gaitWalk; scarecrow_scare; scarecrow_combatIdle; scarecrow_attackNormal; scarecrow_hit; scarecrow_dying; scarecrow_dead
+/build:Models/scarecrow_idle.fbx
+
+#begin Models/man_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=man_armslingright; man_attackClubHigh; man_attackHoeMid; man_attackPickaxe; man_attackPunchHighRight; man_attackPunchLowRight; man_attackPunchRightMiss; man_attackSnapkickRight; man_attackSpearMid; man_attackStompRight; man_chopLow; man_combatBowAim; man_combatBowReload; man_combatCollapse; man_combatHit; man_combatIdleBow; man_combatIdleRifle; man_combatIdleSpear; man_combatIdleUnarmed; man_combatRifleAim; man_combatRifleAimHip; man_combatRifleReload; man_combatSpearThrow; man_combatWatergunReload; man_constructPull; man_cutLow; man_dead; man_driving; man_dropEquipped; man_dropHeavy; man_dropLight; man_dropLightSame; man_dropMounted; man_dropMountedSame; man_dying; man_eat; man_exult; man_fishingHook; man_fishingSpearIdle; man_fishingSpearThrustMiss; man_gaitFatiguedWalk; man_gaitJog; man_gaitLimpWalk; man_gaitRun; man_gaitSlowWalk; man_gaitSneak; man_gaitStoop; man_gaitStroll; man_gaitWalk; man_gather; man_gatherStand; man_hammering; man_haulHeavy; man_haulLight; man_haulHeavyBack; man_idleHandsOnHips; man_idleLong; man_idleMosquito; man_idlePanting; man_idleStretchesBody; man_idleStretchesNeck; man_idleSweat; man_idleTalkArgue; man_idleTalkShort; man_idleToKneel; man_idleToSitting; man_idleToSleep; man_idleWipesNose; man_kneel; man_kneelCollectSoil; man_kneelDig; man_kneelExamineSoil; man_kneelShieldEyes; man_kneelTablet; man_kneelToIdle; man_kneelToSitting; man_kneelWaterDevice; man_mend; man_passenger1Seated; man_passenger2LyingLeft; man_passenger3LyingRight; man_pickaxe; man_pickupEquipped; man_pickupHeavy; man_pickupLight; man_pickupLightSame; man_pickupMounted; man_pickupMountedEquipped; man_scout; man_shoo; man_shovel; man_sittingAttentive; man_sittingIdle; man_sittingMend; man_sittingTablet; man_sittingToIdle; man_sleep; man_sleepToIdle; man_sleepToSitting; man_sneak; man_standingMend; man_startled; man_useHoe;
+/build:Models/man_idle.fbx
+
+#begin Models/bushbackPlant.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/bushbackPlant.fbx
+
+#begin Models/man_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture1.tga
+
+#begin Models/man_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture2.tga
+
+#begin Models/machete.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/machete.fbx
+
+#begin Models/knife.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/knife.fbx
+
+#begin Models/watergunTank.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/watergunTank.fbx
+
+#begin Models/bow.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/bow.fbx
+
+#begin Models/tablet.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/tablet.fbx
+
+#begin Models/demonTree_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=demonTree_attack; demonTree_combatIdle; demonTree_collapse; demonTree_dead; demonTree_walk; demonTree_hit; demonTree_eat
+/build:Models/demonTree_idle.fbx
+
+#begin Models/worm_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=worm_attack; worm_collapse; worm_combatIdle; worm_dead; worm_walk; worm_hit; worm_eat
+/build:Models/worm_idle.fbx
+
+#begin Models/snatcher_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=snatcher_walk; snatcher_eat; snatcher_dead; snatcher_collapse; snatcher_combatIdle; snatcher_attack1; snatcher_attack2; snatcher_hit
+/build:Models/snatcher_idle.fbx
+
+#begin Models/backpackHeavy.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/backpackHeavy.fbx
+
+#begin Models/farmingHoe.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/farmingHoe.fbx
+
+#begin Models/snatcher_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture2.tga
+
+#begin Models/twinklerThin_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=twinkler_gaitWalk; twinkler_attackHighRight; twinkler_attackLowRight; twinkler_dying; twinkler_hit; twinkler_dead; twinkler_eat
+/build:Models/twinklerThin_idle.fbx
+
+#begin Models/thunderChickenThin_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=thunderChicken_gaitWalk; thunderChickenThin_eatNoTentacle; thunderChicken_look; thunderChicken_hidden; thunderChicken_dead; thunderChicken_dying
+/build:Models/thunderChickenThin_idle.fbx
+
+#begin Models/thunderChickenBulky_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=thunderChicken_gaitWalk; thunderChicken_eat; thunderChicken_look; thunderChicken_hidden; thunderChicken_dead; thunderChicken_dying
+/build:Models/thunderChickenBulky_idle.fbx
+
+#begin Models/snatcherArmored_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=snatcher_walk; snatcher_eat; snatcher_dead; snatcher_collapse; snatcher_combatIdle; snatcher_attack1; snatcher_attack2; snatcher_hit
+/build:Models/snatcherArmored_idle.fbx
+
+#begin Models/twinklerThinSpiky_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=twinkler_gaitWalk; twinkler_attackHighRight; twinkler_attackLowRight; twinkler_dying; twinkler_hit; twinkler_dead; twinkler_eat
+/build:Models/twinklerThinSpiky_idle.fbx
+
+#begin Models/demonTreeMoss_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=demonTree_attack; demonTree_combatIdle; demonTree_collapse; demonTree_dead; demonTree_walk; demonTree_hit; demonTree_eat
+/build:Models/demonTreeMoss_idle.fbx
+
+#begin Models/dog_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=dog_attack; dog_collapse; dog_combatIdle; dog_dead; dog_eat; dog_gaitGallop; dog_gaitTrot; dog_gaitWalk; dog_hit; dog_idleHowl; dog_lying; dog_lyingToStand; dog_sleep; dog_standToLying
+/build:Models/dog_idle.fbx
+
+#begin Models/robotHeavy_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/processorParam:MergeAnimations=robotHeavy_drop; robotHeavy_farming; robotHeavy_fold;  robotHeavy_idleUnfolded;  robotHeavy_pickup; robotHeavy_scan; robotHeavy_unfold
+/build:Models/robotHeavy_idle.fbx
+
+#begin Models/robotLight_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/processorParam:MergeAnimations=robotHeavy_fold;  robotHeavy_idleUnfolded;  robotHeavy_scan; robotHeavy_unfold; robotHeavy_farming
+/build:Models/robotLight_idle.fbx
+
+#begin Models/wormThin_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedModelProcessor
+/processorParam:MergeAnimations=worm_attack; worm_collapse; worm_combatIdle; worm_dead; worm_walk; worm_hit; worm_eat
+/build:Models/wormThin_idle.fbx
+
+#begin Models/pickaxe.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/pickaxe.fbx
+
+#begin Models/axe.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/axe.fbx
+
+#begin Models/shovel.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/shovel.fbx
+
+#begin RoadsAndPaths.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:RoadsAndPaths.fx
+
+#begin RoundLine.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:RoundLine.fx
+
+#begin terrain/t_greengrass_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_greengrass_base.png
+
+#begin GUI/GUISprites.xml
+/importer:XmlImporter
+/processor:SpriteSheetProcessor
+/processorParam:Action=None
+/processorParam:ProcessGroundSprites=False
+/processorParam:ProcessOrdinarySprites=True
+/build:GUI/GUISprites.xml
+
+#begin GUI/LCD_Cleaned.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/LCD_Cleaned.png
+
+#begin GUI/Comm/event_dust.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/Comm/event_dust.png
+
+#begin GUI/LCD_Cleaned_more.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/LCD_Cleaned_more.png
+
+#begin GUI/LCD_CircularReflex.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/LCD_CircularReflex.png
+
+#begin GUI/CRT_Lamp_Reflections_Small.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/CRT_Lamp_Reflections_Small.png
+
+#begin GUI/GUI_CRT_Sprites.xml
+/importer:XmlImporter
+/processor:SpriteSheetProcessor
+/processorParam:Action=None
+/processorParam:ProcessGroundSprites=False
+/processorParam:ProcessOrdinarySprites=True
+/build:GUI/GUI_CRT_Sprites.xml
+
+#begin terrain/firegrass_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/firegrass_base.png
+
+#begin terrain/muckroot_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/muckroot_base.png
+
+#begin Models/skimmer.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/processorParam:TextureFormat=NoChange
+/processorParam:EnvironmentMap=landscapeSquare.png
+/build:Models/skimmer.fbx
+
+#begin OverlayEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:OverlayEffect.fx
+
+#begin GhostedBuildings.xml
+/importer:XmlImporter
+/processor:SpriteSheetProcessor
+/processorParam:Action=MakeGhostImage
+/processorParam:ProcessGroundSprites=False
+/processorParam:ProcessOrdinarySprites=True
+/build:GhostedBuildings.xml
+
+#begin overlayGradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:overlayGradient.png
+
+#begin OverlayGroundSpriteEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:OverlayGroundSpriteEffect.fx
+
+#begin Models/box.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/build:Models/box.fbx
+
+#begin Models/utility_vehicle.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/processorParam:DetailsMap=Models/utility_vehicle_details_256.tga
+/processorParam:DirtMap=Models/utility_vehicle_grunge_256.tga
+/build:Models/utility_vehicle.fbx
+
+#begin Models/sentry_idle.fbx
+/importer:FbxImporter
+/processor:AnimatedVehicleProcessor
+/processorParam:MergeAnimations=sentry_activate; sentry_shoot; sentry_combatIdle
+/build:Models/sentry_idle.fbx
+
+#begin terrain/t_humus_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_humus_base.png
+
+#begin terrain/t_rocks_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_rocks_base.png
+
+#begin terrain/t_sand_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_sand_base.png
+
+#begin terrain/grid_test.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/grid_test.png
+
+#begin perlinBig.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:perlinBig.png
+
+#begin perlinMedium.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:perlinMedium.png
+
+#begin terrain/t_deepseabed_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_deepseabed_base.png
+
+#begin terrain/t_muckrootthin_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_muckrootthin_base.png
+
+#begin terrain/t_rocksseabed_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_rocksseabed_base.png
+
+#begin terrain/t_seabed_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_seabed_base.png
+
+#begin terrain/t_rocks_base_depthmap.png
+/importer:TextureImporter
+/processor:NormalMapProcessor
+/build:terrain/t_rocks_base_depthmap.png
+
+#begin terrain/t_limestone_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_limestone_base.png
+
+#begin MainMenu/blank.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/blank.png
+
+#begin MainMenu/gradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/gradient.png
+
+#begin smokeWhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:smokeWhite.png
+
+#begin MainMenu/panorama_1920px.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/panorama_1920px.png
+
+#begin MainMenu/title-text.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/title-text.png
+
+#begin GUI/Lamp_Reflection_Corner.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/Lamp_Reflection_Corner.png
+
+#begin MainMenu/panorama_blue_1920px.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/panorama_blue_1920px.jpg
+
+#begin Models/patrician_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture1.tga
+
+#begin Models/patrician_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture2.tga
+
+#begin Models/patrician_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture3.tga
+
+#begin Models/patrician_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture4.tga
+
+#begin Models/patrician_texture5.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture5.tga
+
+#begin Models/patrician_texture6.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture6.tga
+
+#begin Models/patrician_texture7.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/patrician_texture7.tga
+
+#begin Models/twinkler_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinkler_texture1.tga
+
+#begin Models/twinkler_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinkler_texture2.tga
+
+#begin Models/twinkler_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinkler_texture3.tga
+
+#begin Models/twinkler_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinkler_texture4.tga
+
+#begin Models/bird_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture1.tga
+
+#begin Models/bird_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture2.tga
+
+#begin Models/bird_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture3.tga
+
+#begin Models/bird_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture4.tga
+
+#begin Models/bird_texture5.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture5.tga
+
+#begin Models/scarecrow_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/scarecrow_texture1.tga
+
+#begin Models/scarecrow_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/scarecrow_texture2.tga
+
+#begin Models/thunderChicken_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChicken_texture1.tga
+
+#begin Models/thunderChicken_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChicken_texture2.tga
+
+#begin Models/bushback_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bushback_texture2.tga
+
+#begin Models/bushback_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bushback_texture1.tga
+
+#begin Models/turnip_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/turnip_texture1.tga
+
+#begin Models/turnip_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/turnip_texture2.tga
+
+#begin terrain/t_billowgrass_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_billowgrass_base.png
+
+#begin waterbumpLargeWaves.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:waterbumpLargeWaves.png
+
+#begin waterbumpFlipped.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:waterbumpFlipped.png
+
+#begin Models/man_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture3.tga
+
+#begin Models/man_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture4.tga
+
+#begin Models/man_texture5.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture5.tga
+
+#begin Models/man_texture6.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture6.tga
+
+#begin Models/man_texture7.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture7.tga
+
+#begin Models/man_texture8.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture8.tga
+
+#begin Models/man_texture9.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture9.tga
+
+#begin GUI/Cursors/HUD_cursor.png
+/copy:GUI/Cursors/HUD_cursor.png
+
+#begin MainMenu/TauCetiMainMenu.wmv
+/importer:WmvImporter
+/processor:VideoProcessor
+/build:MainMenu/TauCetiMainMenu.wmv
+
+#begin CloudShadowTexture5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:CloudShadowTexture5.png
+
+#begin pollen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:pollen.png
+
+#begin fog.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:fog.png
+
+#begin Models/knife_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/knife_texture.tga
+
+#begin Models/machete_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/machete_texture.tga
+
+#begin Models/watergun_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/watergun_texture.tga
+
+#begin Models/watergunTank_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/watergunTank_texture.tga
+
+#begin Models/bow_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bow_texture.tga
+
+#begin Models/tablet_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/tablet_texture.tga
+
+#begin Sounds/melee/PUNCH1_02 - 9 Low Thud Punches.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/melee/PUNCH1_02 - 9 Low Thud Punches.wav
+
+#begin Sounds/melee/BODYFALL1_46 - 5 Body Falls On Grass And Dirt.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/melee/BODYFALL1_46 - 5 Body Falls On Grass And Dirt.wav
+
+#begin Music/Martin Hasseldam - A New World (Alt3) 320kBit.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Martin Hasseldam - A New World (Alt3) 320kBit.mp3
+
+#begin Music/Martin Hasseldam - Settle.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Martin Hasseldam - Settle.mp3
+
+#begin Sounds/aliens/angryToy.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/angryToy.mp3
+
+#begin Sounds/aliens/croaker.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/croaker.mp3
+
+#begin Sounds/aliens/twinklerStab.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/twinklerStab.mp3
+
+#begin Sounds/melee/swoosh.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/melee/swoosh.mp3
+
+#begin Sounds/squirt/splish.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/squirt/splish.mp3
+
+#begin Sounds/melee/STAB2_24 - 4 Stabs With Blood.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/melee/STAB2_24 - 4 Stabs With Blood.wav
+
+#begin Sounds/aliens/sliceSnap.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/sliceSnap.mp3
+
+#begin Sounds/aliens/sliceSnapDouble.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/sliceSnapDouble.mp3
+
+#begin Sounds/aliens/hummingClickClacking.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/hummingClickClacking.mp3
+
+#begin Sounds/aliens/toothCrickets.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/toothCrickets.mp3
+
+#begin Sounds/aliens/spacechicken.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/spacechicken.mp3
+
+#begin Sounds/aliens/rattleWooden.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/rattleWooden.mp3
+
+#begin Sounds/aliens/rattleWoodenShort.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/rattleWoodenShort.mp3
+
+#begin Sounds/aliens/bushdragonCombatIdle.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/bushdragonCombatIdle.mp3
+
+#begin Sounds/aliens/bushdragonHit.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/bushdragonHit.mp3
+
+#begin Sounds/ambient/aliens/rattleWoodenAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/rattleWoodenAmbient.mp3
+
+#begin Sounds/ambient/aliens/toothCricketsAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/toothCricketsAmbient.mp3
+
+#begin Sounds/ambient/aliens/angryToyAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/angryToyAmbient.mp3
+
+#begin Sounds/ambient/aliens/croakerAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/croakerAmbient.mp3
+
+#begin Sounds/ambient/aliens/hummingClickClackingAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/hummingClickClackingAmbient.mp3
+
+#begin Sounds/ambient/aliens/rattleBuzzAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/rattleBuzzAmbient.mp3
+
+#begin Sounds/ambient/aliens/spacechickenAmbient.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/spacechickenAmbient.mp3
+
+#begin GUI/Cursors/HUD_cursor_move.png
+/copy:GUI/Cursors/HUD_cursor_move.png
+
+#begin GUI/Cursors/HUD_cursor_scale_horiz.png
+/copy:GUI/Cursors/HUD_cursor_scale_horiz.png
+
+#begin GUI/Cursors/HUD_cursor_scale_vertical.png
+/copy:GUI/Cursors/HUD_cursor_scale_vertical.png
+
+#begin GUI/Cursors/HUD_cursor_scale_upright.png
+/copy:GUI/Cursors/HUD_cursor_scale_upright.png
+
+#begin GUI/Cursors/HUD_cursor_scale_downright.png
+/copy:GUI/Cursors/HUD_cursor_scale_downright.png
+
+#begin Sounds/aliens/bushdragonAttack_lowerVolume.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/bushdragonAttack_lowerVolume.mp3
+
+#begin Models/binalRat_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/binalRat_texture1.tga
+
+#begin MainMenu/TauCetiMainMenuBGOnly_1280px.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu/TauCetiMainMenuBGOnly_1280px.jpg
+
+#begin Scenarios/Scenario 1/Scenario Screen/aircraftWreck_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 1/Scenario Screen/aircraftWreck_scenario_thumb.png
+
+#begin Scenarios/Scenario 2/Scenario Screen/muckrootCamp_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 2/Scenario Screen/muckrootCamp_scenario_thumb.png
+
+#begin Models/man_texture10.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture10.tga
+
+#begin Models/man_texture11.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture11.tga
+
+#begin Models/man_texture12.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture12.tga
+
+#begin Models/man_texture13.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture13.tga
+
+#begin Models/man_texture14.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture14.tga
+
+#begin Models/man_texture15.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture15.tga
+
+#begin Models/man_texture16.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture16.tga
+
+#begin Models/man_texture17.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture17.tga
+
+#begin Models/man_texture18.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture18.tga
+
+#begin Models/man_textureClothes1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes1.tga
+
+#begin Models/man_textureClothes2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes2.tga
+
+#begin Models/man_textureClothes3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes3.tga
+
+#begin Models/man_textureClothes4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes4.tga
+
+#begin Models/man_textureClothes5.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes5.tga
+
+#begin Models/man_textureClothes6.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes6.tga
+
+#begin Models/demonTree_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/demonTree_texture1.tga
+
+#begin Scenarios/Default/Scenario Screen/TitleImgSurvival_1920px.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/Scenario Screen/TitleImgSurvival_1920px.jpg
+
+#begin Scenarios/Scenario 3/Scenario Screen/TitleImgBoat_1920px.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 3/Scenario Screen/TitleImgBoat_1920px.jpg
+
+#begin Scenarios/Scenario 3/Scenario Screen/catamaranWreck_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 3/Scenario Screen/catamaranWreck_scenario_thumb.png
+
+#begin GUI/Type Icons/typeIcon_strippedCatamaran.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GUI/Type Icons/typeIcon_strippedCatamaran.png
+
+#begin Models/spikePlant_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/spikePlant_texture1.tga
+
+#begin Models/worm_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/worm_texture1.tga
+
+#begin Models/snatcher_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture1.tga
+
+#begin Sounds/activities/cooking/cookingBoil.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/cooking/cookingBoil.wav
+
+#begin Sounds/activities/eating/eatingCrunchy.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/eating/eatingCrunchy.wav
+
+#begin Models/backpackHeavy_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/backpackHeavy_texture1.tga
+
+#begin Sounds/activities/salvage/salvageAllDeeperLong.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/salvage/salvageAllDeeperLong.wav
+
+#begin Sounds/ambient/wind/windMidFreq.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windMidFreq.wav
+
+#begin Sounds/ambient/aliens/insectsMediumGroup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/insectsMediumGroup.wav
+
+#begin Sounds/ambient/birds/birdsMediumGroup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdsMediumGroup.wav
+
+#begin Models/goldenCenobite_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/goldenCenobite_texture1.tga
+
+#begin Scenarios/Scenario 4/Scenario Screen/TitleImgManFence_1920px.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 4/Scenario Screen/TitleImgManFence_1920px.jpg
+
+#begin Sounds/ambient/aliens/swampFrogs.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/swampFrogs.wav
+
+#begin Sounds/ambient/aliens/swampFrogs2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/swampFrogs2.wav
+
+#begin Sounds/ambient/aliens/swampFrogs3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/swampFrogs3.wav
+
+#begin Sounds/ambient/aliens/insectsLongConstantwBreak.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/insectsLongConstantwBreak.wav
+
+#begin Sounds/ambient/aliens/wormAmbienceSingle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/wormAmbienceSingle.wav
+
+#begin Sounds/ambient/aliens/insectsSingleA.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/insectsSingleA.wav
+
+#begin Sounds/ambient/aliens/insectsSingleB.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/aliens/insectsSingleB.wav
+
+#begin Sounds/ambient/birds/birdSingleA.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingleA.wav
+
+#begin Sounds/ambient/wind/windHighFreq.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windHighFreq.wav
+
+#begin Sounds/ambient/water/waterBrook.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterBrook.wav
+
+#begin Sounds/activities/building/buildingHammer.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingHammer.wav
+
+#begin Sounds/activities/building/buildingSteel.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingSteel.wav
+
+#begin Sounds/activities/weapons/coilrifleReload1b.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilrifleReload1b.wav
+
+#begin Sounds/activities/weapons/coilrifleShot1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilrifleShot1a.wav
+
+#begin Sounds/activities/weapons/coilrifleShot1b.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilrifleShot1b.wav
+
+#begin Sounds/activities/weapons/coilrifleShot1c.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilrifleShot1c.wav
+
+#begin Sounds/activities/weapons/coilrifleShot1d.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilrifleShot1d.wav
+
+#begin Sounds/activities/weapons/extinguisherBoostShot1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/extinguisherBoostShot1a.wav
+
+#begin Sounds/aliens/alienCombat/bushdragonAttack1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/bushdragonAttack1a.wav
+
+#begin Sounds/aliens/alienCombat/bushdragonDeath1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/bushdragonDeath1a.wav
+
+#begin Sounds/aliens/alienCombat/bushdragonHit1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/bushdragonHit1a.wav
+
+#begin Sounds/aliens/alienCombat/bushdragonPoisonShot1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/bushdragonPoisonShot1a.wav
+
+#begin Sounds/aliens/alienCombat/poisonAlienImpact1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/poisonAlienImpact1a.wav
+
+#begin Sounds/aliens/alienCombat/wormAttackStart1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/wormAttackStart1a.wav
+
+#begin Sounds/aliens/alienCombat/wormDeath1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/wormDeath1a.wav
+
+#begin Sounds/aliens/alienCombat/wormHit1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/wormHit1a.wav
+
+#begin Sounds/aliens/alienCombat/snatcherAttack1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/snatcherAttack1a.wav
+
+#begin Sounds/aliens/alienCombat/snatcherDeath1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/snatcherDeath1a.wav
+
+#begin Sounds/aliens/alienCombat/snatcherHit1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/snatcherHit1a.wav
+
+#begin Sounds/aliens/alienCombat/wormAttackAction1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/wormAttackAction1a.wav
+
+#begin Sounds/aliens/binalRatDie1a.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/binalRatDie1a.wav
+
+#begin Sounds/ambient/birds/birdSingleInAmbience.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingleInAmbience.wav
+
+#begin Sounds/ambient/wind/windMidFreq2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windMidFreq2.wav
+
+#begin Sounds/ambient/wind/windHighFreq2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windHighFreq2.wav
+
+#begin Sounds/ambient/birds/birdsMediumGroup3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdsMediumGroup3.wav
+
+#begin Sounds/ambient/birds/birdSingle1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle1A.wav
+
+#begin Sounds/ambient/birds/birdSingle1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle1B.wav
+
+#begin Sounds/ambient/birds/birdSingle1C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle1C.wav
+
+#begin Sounds/ambient/birds/birdSingle2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle2A.wav
+
+#begin Sounds/ambient/birds/birdSingle2B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle2B.wav
+
+#begin Sounds/ambient/birds/birdSingle2C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle2C.wav
+
+#begin Sounds/ambient/insects/insectGroup1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/insects/insectGroup1A.wav
+
+#begin Sounds/ambient/insects/insectGroup1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/insects/insectGroup1B.wav
+
+#begin Sounds/ambient/insects/insectGroup1C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/insects/insectGroup1C.wav
+
+#begin Sounds/activities/gather/gatherHandKneelDig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherHandKneelDig.wav
+
+#begin Sounds/activities/gather/gatherCutLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherCutLow.wav
+
+#begin Sounds/activities/gather/gatherHandGatherStand.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherHandGatherStand.wav
+
+#begin Sounds/activities/gather/gatherHandKneelDig1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherHandKneelDig1.wav
+
+#begin Sounds/activities/gather/gatherChopLow2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherChopLow2.wav
+
+#begin Sounds/ambient/water/waterRiverMediumStreamA.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterRiverMediumStreamA.wav
+
+#begin Sounds/ambient/water/waterRiverMediumStreamB.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterRiverMediumStreamB.wav
+
+#begin Sounds/ambient/water/waterRiverMediumStreamC.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterRiverMediumStreamC.wav
+
+#begin Sounds/ambient/birds/birdSingle3A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle3A.wav
+
+#begin Sounds/ambient/birds/birdSingle3B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle3B.wav
+
+#begin Sounds/ambient/wind/windHighFreqGustyLong1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windHighFreqGustyLong1A.wav
+
+#begin Sounds/ambient/wind/windHighFreqGustyLong1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windHighFreqGustyLong1B.wav
+
+#begin Sounds/ambient/wind/windHighFreqGustyLong1C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/wind/windHighFreqGustyLong1C.wav
+
+#begin Sounds/ambient/water/waterBrookSmallA.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterBrookSmallA.wav
+
+#begin Sounds/ambient/water/waterBrookSmallB.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterBrookSmallB.wav
+
+#begin Sounds/ambient/water/waterBrookSmallC.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/waterBrookSmallC.wav
+
+#begin Sounds/ambient/birds/birdSingle4A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle4A.wav
+
+#begin Sounds/ambient/birds/birdSingle4B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle4B.wav
+
+#begin Sounds/ambient/birds/birdSingle4C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle4C.wav
+
+#begin Sounds/ambient/birds/birdSingle4D.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle4D.wav
+
+#begin Sounds/ambient/birds/birdSingle5A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle5A.wav
+
+#begin Sounds/ambient/birds/birdSingle5B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle5B.wav
+
+#begin Sounds/ambient/birds/birdSingle5C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle5C.wav
+
+#begin Sounds/ambient/birds/birdSingle5D.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/birds/birdSingle5D.wav
+
+#begin Sounds/ambient/water/shoreWavesCalm2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/shoreWavesCalm2A.wav
+
+#begin Sounds/ambient/water/shoreWavesCalm2B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/shoreWavesCalm2B.wav
+
+#begin Sounds/ambient/water/shoreWavesCalm2C.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/shoreWavesCalm2C.wav
+
+#begin Sounds/ambient/insects/insectFlying1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/insects/insectFlying1A.wav
+
+#begin Sounds/ambient/insects/insectFlying1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/insects/insectFlying1B.wav
+
+#begin Sounds/activities/farming/farmingHoeDirtSoil1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/farming/farmingHoeDirtSoil1A.wav
+
+#begin Sounds/activities/farming/farmingHoeDirtSoil1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/farming/farmingHoeDirtSoil1B.wav
+
+#begin Sounds/activities/gather/gatherHandGather3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/gather/gatherHandGather3.wav
+
+#begin Sounds/activities/salvage/salvageBreakMetal1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/salvage/salvageBreakMetal1.wav
+
+#begin Sounds/activities/salvage/salvageBreakMetal2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/salvage/salvageBreakMetal2.wav
+
+#begin Sounds/activities/salvage/salvagePullMetal.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/salvage/salvagePullMetal.wav
+
+#begin Sounds/activities/melee/kickHard1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/kickHard1B.wav
+
+#begin Sounds/activities/melee/kickHard2B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/kickHard2B.wav
+
+#begin Sounds/activities/melee/punchLight1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/punchLight1.wav
+
+#begin Sounds/activities/melee/punchLight2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/punchLight2.wav
+
+#begin Sounds/activities/melee/punchLight3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/punchLight3.wav
+
+#begin Sounds/activities/melee/swooshClothHigh1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/swooshClothHigh1.wav
+
+#begin Sounds/activities/melee/swooshClothHigh2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/swooshClothHigh2.wav
+
+#begin Sounds/activities/melee/swooshClothHigh3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/swooshClothHigh3.wav
+
+#begin Sounds/activities/melee/swooshClothLow1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/swooshClothLow1.wav
+
+#begin Sounds/activities/melee/swooshClothLow2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/melee/swooshClothLow2.wav
+
+#begin Sounds/activities/weapons/macheteImpaleHard.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/macheteImpaleHard.wav
+
+#begin Sounds/activities/weapons/macheteImpaleHardB.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/macheteImpaleHardB.wav
+
+#begin Sounds/activities/weapons/macheteImpaleHardC.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/macheteImpaleHardC.wav
+
+#begin Sounds/activities/weapons/macheteImpaleHardD.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/macheteImpaleHardD.wav
+
+#begin Sounds/activities/weapons/knifeStab1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/knifeStab1A.wav
+
+#begin Sounds/activities/weapons/knifeStabBloody1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/knifeStabBloody1A.wav
+
+#begin Sounds/activities/weapons/knifeStabBloody1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/knifeStabBloody1B.wav
+
+#begin Sounds/activities/weapons/bow/arrowImpact2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/bow/arrowImpact2A.wav
+
+#begin Sounds/activities/weapons/bow/bowAim2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/bow/bowAim2A.wav
+
+#begin Sounds/activities/weapons/bow/bowReload2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/bow/bowReload2A.wav
+
+#begin Sounds/activities/weapons/bow/bowShot2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/bow/bowShot2A.wav
+
+#begin Sounds/activities/building/buildingElectronic1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingElectronic1.wav
+
+#begin Sounds/activities/building/buildingElectronic2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingElectronic2.wav
+
+#begin Sounds/activities/weapons/coilRifle/coilrifleShotHard.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/coilRifle/coilrifleShotHard.wav
+
+#begin Sounds/ambient/water/shoreWavesCalmLonger3A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/shoreWavesCalmLonger3A.wav
+
+#begin Sounds/ambient/water/shoreWavesCalmLonger3B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/shoreWavesCalmLonger3B.wav
+
+#begin Sounds/activities/building/buildingTarpKneelDig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpKneelDig.wav
+
+#begin Sounds/activities/building/buildingTarpKneelWaterDevice.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpKneelWaterDevice.wav
+
+#begin Sounds/activities/building/buildingTarpMend.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpMend.wav
+
+#begin Sounds/activities/building/buildingTarpImprovisedKneelDig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpImprovisedKneelDig.wav
+
+#begin Sounds/activities/building/buildingTarpImprovisedKneelWaterDevice.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpImprovisedKneelWaterDevice.wav
+
+#begin Sounds/activities/building/buildingTarpImprovisedMend.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingTarpImprovisedMend.wav
+
+#begin Sounds/activities/building/buildingMetalKneelDig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingMetalKneelDig.wav
+
+#begin Sounds/activities/building/buildingMetalKneelWaterDevice.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingMetalKneelWaterDevice.wav
+
+#begin Sounds/activities/building/buildingMetalMend.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingMetalMend.wav
+
+#begin Sounds/ambient/water/mudflats1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/mudflats1.wav
+
+#begin Sounds/ambient/water/mudflats2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/mudflats2.wav
+
+#begin Sounds/ambient/water/mudflatsCompressed1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/mudflatsCompressed1.wav
+
+#begin Sounds/ambient/water/mudflatsCompressed2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ambient/water/mudflatsCompressed2.wav
+
+#begin Sounds/activities/salvage/salvageMetalCutLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/salvage/salvageMetalCutLow.wav
+
+#begin Sounds/activities/butcher/butcherChopLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/butcher/butcherChopLow.wav
+
+#begin Sounds/activities/butcher/butcherConstructPull.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/butcher/butcherConstructPull.wav
+
+#begin Sounds/activities/butcher/butcherCutLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/butcher/butcherCutLow.wav
+
+#begin Sounds/activities/butcher/butcherSharpen.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/butcher/butcherSharpen.wav
+
+#begin Sounds/activities/butcher/butcherGather.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/butcher/butcherGather.wav
+
+#begin Sounds/activities/building/buildingImprovisedKneelDig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingImprovisedKneelDig.wav
+
+#begin Sounds/activities/building/buildingImprovisedKneelWaterDevice.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingImprovisedKneelWaterDevice.wav
+
+#begin Sounds/activities/building/buildingImprovisedMend.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/building/buildingImprovisedMend.wav
+
+#begin Sounds/activities/crafting/craftingGeneral1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/crafting/craftingGeneral1.wav
+
+#begin Sounds/activities/crafting/craftingGeneral2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/crafting/craftingGeneral2.wav
+
+#begin Models/thunderChickenBulky_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenBulky_texture1.tga
+
+#begin Models/thunderChickenBulky_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenBulky_texture2.tga
+
+#begin Models/thunderChickenBulky_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenBulky_texture3.tga
+
+#begin Models/thunderChickenThin_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenThin_texture1.tga
+
+#begin Models/thunderChickenThin_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenThin_texture2.tga
+
+#begin Models/thunderChickenThin_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/thunderChickenThin_texture3.tga
+
+#begin Models/demonTreeMoss_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/demonTreeMoss_texture1.tga
+
+#begin Models/demonTreeMoss_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/demonTreeMoss_texture2.tga
+
+#begin Models/demonTreeMoss_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/demonTreeMoss_texture3.tga
+
+#begin Models/snatcherArmored_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcherArmored_texture1.tga
+
+#begin Sounds/activities/crafting/craftingGeneral1b.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/crafting/craftingGeneral1b.wav
+
+#begin Sounds/activities/crafting/craftingGeneral2b.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/crafting/craftingGeneral2b.wav
+
+#begin Models/twinklerThin_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinklerThin_texture1.tga
+
+#begin Models/twinklerThinSpiky_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/twinklerThinSpiky_texture1.tga
+
+#begin Models/dogShepherd_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dogShepherd_texture1.tga
+
+#begin Models/wormThin_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/wormThin_texture1.tga
+
+#begin Models/robot_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/robot_texture1.tga
+
+#begin Sounds/activities/weapons/sentryGun/sentryBurstCasingsHigh.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryBurstCasingsHigh.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryBurstCasingsLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryBurstCasingsLow.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryHardBurst.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryHardBurst.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryHardSingle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryHardSingle.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryMedium2Burst.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryMedium2Burst.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryMedium2Single.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryMedium2Single.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryMediumBurst.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryMediumBurst.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentryMediumSingle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentryMediumSingle.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentrySingleCasingsHigh.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentrySingleCasingsHigh.wav
+
+#begin Sounds/activities/weapons/sentryGun/sentrySingleCasingsLow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/weapons/sentryGun/sentrySingleCasingsLow.wav
+
+#begin Sounds/traps/mineDetonateBeep.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/traps/mineDetonateBeep.wav
+
+#begin Sounds/traps/mineExplosionHardwDebris.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/traps/mineExplosionHardwDebris.wav
+
+#begin Sounds/domesticated/dog/dogAttackBark1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogAttackBark1.wav
+
+#begin Sounds/domesticated/dog/dogAttackBark2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogAttackBark2.wav
+
+#begin Sounds/domesticated/dog/dogAttackSnarl1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogAttackSnarl1.wav
+
+#begin Sounds/domesticated/dog/dogAttackSnarl2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogAttackSnarl2.wav
+
+#begin Sounds/domesticated/dog/dogBark1A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogBark1A.wav
+
+#begin Sounds/domesticated/dog/dogBark1B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogBark1B.wav
+
+#begin Sounds/domesticated/dog/dogBark2A.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogBark2A.wav
+
+#begin Sounds/domesticated/dog/dogBark2B.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogBark2B.wav
+
+#begin Sounds/domesticated/dog/dogEat.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogEat.wav
+
+#begin Sounds/domesticated/dog/dogHitBark1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogHitBark1.wav
+
+#begin Sounds/domesticated/dog/dogHitBark2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogHitBark2.wav
+
+#begin Sounds/domesticated/dog/dogHitWhimper1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogHitWhimper1.wav
+
+#begin Sounds/domesticated/dog/dogHitWhimper2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/domesticated/dog/dogHitWhimper2.wav
+
+#begin Sounds/activities/robots/robotDriveElectronicBig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveElectronicBig.wav
+
+#begin Sounds/activities/robots/robotDriveElectronicMedium.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveElectronicMedium.wav
+
+#begin Sounds/activities/robots/robotDriveElectronicSmall.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveElectronicSmall.wav
+
+#begin Sounds/activities/robots/robotDriveEngineBig.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveEngineBig.wav
+
+#begin Sounds/activities/robots/robotDriveEngineMedium.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveEngineMedium.wav
+
+#begin Sounds/activities/robots/robotDriveEngineSmall.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotDriveEngineSmall.wav
+
+#begin Sounds/activities/robots/robotServoArms.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotServoArms.wav
+
+#begin Sounds/activities/robots/robotServoArms2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/activities/robots/robotServoArms2.wav
+
+#begin Scenarios/Scenario 4/Scenario Screen/colonyFarmDogRobot_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 4/Scenario Screen/colonyFarmDogRobot_scenario_thumb.png
+
+#begin Models/bird_texture3b.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture3b.tga
+
+#begin Models/bird_texture5b.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture5b.tga
+
+#begin Models/bird_texture5c.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/bird_texture5c.tga
+
+#begin Music/Martin Hasseldam - Unfamiliar Starlight.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Martin Hasseldam - Unfamiliar Starlight.mp3
+
+#begin Music/Martin Hasseldam - Life in the Wilderness.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Martin Hasseldam - Life in the Wilderness.mp3
+
+#begin Models/man_texture.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_texture.tga
+
+#begin Models/man_textureClothes10.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes10.tga
+
+#begin Models/man_textureClothes11.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes11.tga
+
+#begin Models/man_textureClothes12.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes12.tga
+
+#begin Models/man_textureClothes13.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes13.tga
+
+#begin Models/man_textureClothes14.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes14.tga
+
+#begin Models/man_textureClothes15.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes15.tga
+
+#begin Models/man_textureClothes16.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes16.tga
+
+#begin Models/man_textureClothes17.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes17.tga
+
+#begin Models/man_textureClothes18.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes18.tga
+
+#begin Models/man_textureClothes19.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes19.tga
+
+#begin Models/man_textureClothes20.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes20.tga
+
+#begin Models/man_textureClothes21.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes21.tga
+
+#begin Models/man_textureClothes22.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes22.tga
+
+#begin Models/man_textureClothes23.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes23.tga
+
+#begin Models/man_textureClothes24.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes24.tga
+
+#begin Models/man_textureClothes25.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes25.tga
+
+#begin Models/man_textureClothes26.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes26.tga
+
+#begin Models/man_textureClothes7.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes7.tga
+
+#begin Models/man_textureClothes8.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes8.tga
+
+#begin Models/man_textureClothes9.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/man_textureClothes9.tga
+
+#begin Scenarios/Default/GUI/regionalMap_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/GUI/regionalMap_1.png
+
+#begin Scenarios/Default/GUI/regionalMap_2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/GUI/regionalMap_2.png
+
+#begin Models/snatcher_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture3.tga
+
+#begin Models/snatcher_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture4.tga
+
+#begin Models/snatcher_texture5.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture5.tga
+
+#begin Models/snatcher_texture6.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture6.tga
+
+#begin Models/snatcher_texture7.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcher_texture7.tga
+
+#begin Models/snatcherArmored_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcherArmored_texture2.tga
+
+#begin Models/snatcherArmored_texture3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcherArmored_texture3.tga
+
+#begin Models/snatcherArmored_texture4.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/snatcherArmored_texture4.tga
+
+#begin Music/Jesper Lundager - Building a Home_320.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Jesper Lundager - Building a Home_320.mp3
+
+#begin Music/Jesper Lundager - Cetian Skies_320.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Jesper Lundager - Cetian Skies_320.mp3
+
+#begin Music/Jesper Lundager - Muckroot Toil_320.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Jesper Lundager - Muckroot Toil_320.mp3
+
+#begin Music/Jesper Lundager - Prosperous Frontier_320.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Jesper Lundager - Prosperous Frontier_320.mp3
+
+#begin Music/Jesper Lundager - The Diamond Birds_320.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Jesper Lundager - The Diamond Birds_320.mp3
+
+#begin Scenarios/Default/GUI/regionalMap_3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/GUI/regionalMap_3.png
+
+#begin Scenarios/Scenario 5/Scenario Screen/parasolHouse_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 5/Scenario Screen/parasolHouse_scenario_thumb.png
+
+#begin terrain/t_vulcanic_base.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:terrain/t_vulcanic_base.png
+
+#begin Scenarios/Default/GUI/regionalMap_4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/GUI/regionalMap_4.png
+
+#begin Models/wormSimple_texture1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/wormSimple_texture1.tga
+
+#begin Models/wormSimple_texture2.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/wormSimple_texture2.tga
+
+#begin Scenarios/Default/GUI/regionalMap_5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Default/GUI/regionalMap_5.png
+
+#begin Scenarios/Scenario 6/Scenario Screen/clayPit_scenario_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Scenarios/Scenario 6/Scenario Screen/clayPit_scenario_thumb.png
+
+#begin Sounds/aliens/alienCombat/flutter_Mat43_v2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/flutter_Mat43_v2.wav
+
+#begin Sounds/aliens/alienCombat/humming_Mat8_v2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/humming_Mat8_v2.wav
+
+#begin Sounds/aliens/alienCombat/strumming_Mat25_v1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/aliens/alienCombat/strumming_Mat25_v1.wav
+

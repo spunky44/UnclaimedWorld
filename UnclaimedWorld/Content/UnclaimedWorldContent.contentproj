@@ -1,0 +1,3042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{39751B33-FF9F-4413-84BC-62519FE6DEF8}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameEngine.Sim</RootNamespace>
+    <AssemblyName>WindowsGame1</AssemblyName>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Profile|x86' ">
+    <OutputPath>bin\x86\Profile\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AnimationComponentPipeline\AnimationComponentPipeline.csproj">
+      <Project>{70808508-17E8-421C-B29A-F7F310FA2171}</Project>
+      <Name>AnimationComponentPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SpriteEffectsPipeline\SpriteEffectsPipeline.csproj">
+      <Project>{466C925C-4BFE-49E8-ADFA-ADAE1B9E2B12}</Project>
+      <Name>SpriteEffectsPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SpriteSheetPipeline\SpriteSheetPipeline.csproj">
+      <Project>{288693A4-E777-4A32-A658-3AB8B48C8511}</Project>
+      <Name>SpriteSheetPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VehiclePipeline\VehiclePipeline.csproj">
+      <Project>{A59E98FD-1044-498D-9D94-0D23EF6FBB8B}</Project>
+      <Name>VehiclePipeline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bushback_idle.fbx">
+      <Name>bushback_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>bushback_gaitWalk%3b bushback_eat%3b bushback_hide%3b bushback_collapse%3b bushback_dead</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\spikePlant_idle.fbx">
+      <Name>spikePlant_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>spikePlant_attack%3b spikePlant_combatIdle%3b spikePlant_dead%3b spikePlant_collapse%3b spikePlant_hit</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\watergun.fbx">
+      <Name>watergun</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\arrowImpact1a.wav">
+      <Name>arrowImpact1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="TimeOfDayAndLightsources.fx">
+      <Name>TimeOfDayAndLightsources</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="alphaTex.png">
+      <Name>alphaTex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Arial.spritefont">
+      <Name>Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="explosion.png">
+      <Name>explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="multiTex.fx">
+      <Name>multiTex</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="perlin.png">
+      <Name>perlin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="skinFX.fx">
+      <Name>skinFX</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="smoke.bmp">
+      <Name>smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="SpriteFont1.spritefont">
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameThumbnail.png">
+      <Name>GameThumbnail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildingsAndTrees.xml">
+      <Name>BuildingsAndTrees</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>ExtendedSpriteSheetProcessor</Processor>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TimeOfDay_Alpha.xml">
+      <Name>TimeOfDay_Alpha</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="TimeOfDay_Blue.xml">
+      <Name>TimeOfDay_Blue</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="TimeOfDay_Greens.xml">
+      <Name>TimeOfDay_Greens</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="TimeOfDay_Reds.xml">
+      <Name>TimeOfDay_Reds</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="structureBillboards\whiteFace.jpg">
+      <Name>whiteFace</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="water.fx">
+      <Name>water</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cloudMap.jpg">
+      <Name>cloudMap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BloomCombine.fx">
+      <Name>BloomCombine</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BloomExtract.fx">
+      <Name>BloomExtract</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="GaussianBlur.fx">
+      <Name>GaussianBlur</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vehicle.fx">
+      <Name>Vehicle</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="seattle.bmp">
+      <Name>seattle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Billboard.fx">
+      <Name>Billboard</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="perlin_2.png">
+      <Name>perlin_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_earth_base.png">
+      <Name>t_earth_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EdgeDetect.fx">
+      <Name>EdgeDetect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DevShape.fx">
+      <Name>DevShape</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlatSprites.xml">
+      <Name>FlatSprites</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
+      <ProcessorParameters_ProcessGroundSprites>True</ProcessorParameters_ProcessGroundSprites>
+      <ProcessorParameters_ProcessOrdinarySprites>False</ProcessorParameters_ProcessOrdinarySprites>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LightSources.xml">
+      <Name>LightSources</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>LightSourceSpriteSheetProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LightSourcesEffect.fx">
+      <Name>LightSourcesEffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=None" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MapData\treeSpeciesMap.png">
+      <Name>treeSpeciesMap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloudShadows.fx">
+      <Name>CloudShadows</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clouds.png">
+      <Name>clouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="waterbump.png">
+      <Name>waterbump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloudShadowTexture4.png">
+      <Name>CloudShadowTexture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MapData\treeDensityMap.png">
+      <Name>treeDensityMap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\CRT_Dropshadow.png">
+      <Name>CRT_Dropshadow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="GUI\CRT_Grunge_v2.png">
+      <Name>CRT_Grunge_v2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="GUI\CRT_Lamp_reflections.png">
+      <Name>CRT_Lamp_reflections</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="GUI\CRT_ScanLines.png">
+      <Name>CRT_ScanLines</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\CRT.fx">
+      <Name>CRT</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\LCD.fx">
+      <Name>LCD</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\turnip_idle.fbx">
+      <Name>turnip_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>turnip_gaitWalk%3b turnip_hide%3b turnip_tentaclesLooking</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\turnip_texture128.tga">
+      <Name>turnip_texture128</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\patrician_idle.fbx">
+      <Name>patrician_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>patrician_gaitWalk%3b patrician_combatIdle%3b patrician_attackHighDouble%3b patrician_attackLowRight%3b patrician_hit%3b patrician_collapse%3b patrician_dying%3b patrician_dead%3b patrician_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\twinkler_idle.fbx">
+      <Name>twinkler_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>twinkler_gaitWalk%3b twinkler_attackHighRight%3b twinkler_attackLowRight%3b twinkler_dying%3b twinkler_hit%3b twinkler_dead%3b twinkler_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\meshtest.fbx">
+      <Name>meshtest</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\skinnedtest_idle.fbx">
+      <Name>skinnedtest_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>dog_attack%3b dog_collapse%3b dog_combatIdle%3b dog_dead%3b dog_eat%3b dog_gaitGallop%3b dog_hit%3b dog_idleHowl%3b dog_gaitTrot%3b dog_gaitWalk%3b dog_lying%3b dog_sleep%3b dog_lyingToStand%3b dog_standToLying%3b</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\bird_idle.fbx">
+      <Name>bird_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>bird_walk</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\hammer.fbx">
+      <Name>hammer</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChicken_idle.fbx">
+      <Name>thunderChicken_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>thunderChicken_gaitWalk%3b thunderChicken_eat%3b thunderChicken_look%3b thunderChicken_hidden%3b thunderChicken_dead%3b thunderChicken_dying</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\backpack.fbx">
+      <Name>backpack</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\rifle.fbx">
+      <Name>rifle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\spear.fbx">
+      <Name>spear</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\armsling.fbx">
+      <Name>armsling</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\tentacle_idle.fbx">
+      <Name>tentacle_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\woman_idle.fbx">
+      <Name>woman_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>man_armslingright%3b man_attackClubHigh%3b man_attackHoeMid%3b man_attackPickaxe%3b man_attackPunchHighRight%3b man_attackPunchLowRight%3b man_attackPunchRightMiss%3b man_attackSnapkickRight%3b man_attackSpearMid%3b man_attackStompRight%3b man_chopLow%3b man_combatBowAim%3b man_combatBowReload%3b man_combatCollapse%3b man_combatHit%3b man_combatIdleBow%3b man_combatIdleRifle%3b man_combatIdleSpear%3b man_combatIdleUnarmed%3b man_combatRifleAim%3b man_combatRifleAimHip%3b man_combatRifleReload%3b man_combatSpearThrow%3b man_combatWatergunReload%3b man_constructPull%3b man_cutLow%3b man_dead%3b man_driving%3b man_dropEquipped%3b man_dropHeavy%3b man_dropLight%3b man_dropLightSame%3b man_dropMounted%3b man_dropMountedSame%3b man_dying%3b man_eat%3b man_exult%3b man_fishingHook%3b man_fishingSpearIdle%3b man_fishingSpearThrustMiss%3b man_gaitFatiguedWalk%3b man_gaitJog%3b man_gaitLimpWalk%3b man_gaitRun%3b man_gaitSlowWalk%3b man_gaitSneak%3b man_gaitStoop%3b man_gaitStroll%3b man_gaitWalk%3b man_gather%3b man_gatherStand%3b man_hammering%3b man_haulHeavy%3b man_haulLight%3b man_haulHeavyBack%3b man_idleHandsOnHips%3b man_idleLong%3b man_idleMosquito%3b man_idlePanting%3b man_idleStretchesBody%3b man_idleStretchesNeck%3b man_idleSweat%3b man_idleTalkArgue%3b man_idleTalkShort%3b man_idleToKneel%3b man_idleToSitting%3b man_idleToSleep%3b man_idleWipesNose%3b man_kneel%3b man_kneelCollectSoil%3b man_kneelDig%3b man_kneelExamineSoil%3b man_kneelShieldEyes%3b man_kneelTablet%3b man_kneelToIdle%3b man_kneelToSitting%3b man_kneelWaterDevice%3b man_mend%3b man_passenger1Seated%3b man_passenger2LyingLeft%3b man_passenger3LyingRight%3b man_pickaxe%3b man_pickupEquipped%3b man_pickupHeavy%3b man_pickupLight%3b man_pickupLightSame%3b man_pickupMounted%3b man_pickupMountedEquipped%3b man_scout%3b man_shoo%3b man_shovel%3b man_sittingAttentive%3b man_sittingIdle%3b man_sittingMend%3b man_sittingTablet%3b man_sittingToIdle%3b man_sleep%3b man_sleepToIdle%3b man_sleepToSitting%3b man_sneak%3b man_standingMend%3b man_startled%3b man_useHoe%3b</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\scarecrow_idle.fbx">
+      <Name>scarecrow_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>scarecrow_gaitWalk%3b scarecrow_scare%3b scarecrow_combatIdle%3b scarecrow_attackNormal%3b scarecrow_hit%3b scarecrow_dying%3b scarecrow_dead</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <None Include="ModelShader.fxh">
+      <Name>ModelShader</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </None>
+    <Compile Include="Models\man_idle.fbx">
+      <Name>man_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>man_armslingright%3b man_attackClubHigh%3b man_attackHoeMid%3b man_attackPickaxe%3b man_attackPunchHighRight%3b man_attackPunchLowRight%3b man_attackPunchRightMiss%3b man_attackSnapkickRight%3b man_attackSpearMid%3b man_attackStompRight%3b man_chopLow%3b man_combatBowAim%3b man_combatBowReload%3b man_combatCollapse%3b man_combatHit%3b man_combatIdleBow%3b man_combatIdleRifle%3b man_combatIdleSpear%3b man_combatIdleUnarmed%3b man_combatRifleAim%3b man_combatRifleAimHip%3b man_combatRifleReload%3b man_combatSpearThrow%3b man_combatWatergunReload%3b man_constructPull%3b man_cutLow%3b man_dead%3b man_driving%3b man_dropEquipped%3b man_dropHeavy%3b man_dropLight%3b man_dropLightSame%3b man_dropMounted%3b man_dropMountedSame%3b man_dying%3b man_eat%3b man_exult%3b man_fishingHook%3b man_fishingSpearIdle%3b man_fishingSpearThrustMiss%3b man_gaitFatiguedWalk%3b man_gaitJog%3b man_gaitLimpWalk%3b man_gaitRun%3b man_gaitSlowWalk%3b man_gaitSneak%3b man_gaitStoop%3b man_gaitStroll%3b man_gaitWalk%3b man_gather%3b man_gatherStand%3b man_hammering%3b man_haulHeavy%3b man_haulLight%3b man_haulHeavyBack%3b man_idleHandsOnHips%3b man_idleLong%3b man_idleMosquito%3b man_idlePanting%3b man_idleStretchesBody%3b man_idleStretchesNeck%3b man_idleSweat%3b man_idleTalkArgue%3b man_idleTalkShort%3b man_idleToKneel%3b man_idleToSitting%3b man_idleToSleep%3b man_idleWipesNose%3b man_kneel%3b man_kneelCollectSoil%3b man_kneelDig%3b man_kneelExamineSoil%3b man_kneelShieldEyes%3b man_kneelTablet%3b man_kneelToIdle%3b man_kneelToSitting%3b man_kneelWaterDevice%3b man_mend%3b man_passenger1Seated%3b man_passenger2LyingLeft%3b man_passenger3LyingRight%3b man_pickaxe%3b man_pickupEquipped%3b man_pickupHeavy%3b man_pickupLight%3b man_pickupLightSame%3b man_pickupMounted%3b man_pickupMountedEquipped%3b man_scout%3b man_shoo%3b man_shovel%3b man_sittingAttentive%3b man_sittingIdle%3b man_sittingMend%3b man_sittingTablet%3b man_sittingToIdle%3b man_sleep%3b man_sleepToIdle%3b man_sleepToSitting%3b man_sneak%3b man_standingMend%3b man_startled%3b man_useHoe%3b</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\bushbackPlant.fbx">
+      <Name>bushbackPlant</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture1.tga">
+      <Name>man_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture2.tga">
+      <Name>man_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\machete.fbx">
+      <Name>machete</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\knife.fbx">
+      <Name>knife</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\watergunTank.fbx">
+      <Name>watergunTank</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\bow.fbx">
+      <Name>bow</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\tablet.fbx">
+      <Name>tablet</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\demonTree_idle.fbx">
+      <Name>demonTree_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>demonTree_attack%3b demonTree_combatIdle%3b demonTree_collapse%3b demonTree_dead%3b demonTree_walk%3b demonTree_hit%3b demonTree_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\worm_idle.fbx">
+      <Name>worm_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>worm_attack%3b worm_collapse%3b worm_combatIdle%3b worm_dead%3b worm_walk%3b worm_hit%3b worm_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\snatcher_idle.fbx">
+      <Name>snatcher_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>snatcher_walk%3b snatcher_eat%3b snatcher_dead%3b snatcher_collapse%3b snatcher_combatIdle%3b snatcher_attack1%3b snatcher_attack2%3b snatcher_hit</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\backpackHeavy.fbx">
+      <Name>backpackHeavy</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\farmingHoe.fbx">
+      <Name>farmingHoe</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcher_texture2.tga">
+      <Name>snatcher_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\twinklerThin_idle.fbx">
+      <Name>twinklerThin_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>twinkler_gaitWalk%3b twinkler_attackHighRight%3b twinkler_attackLowRight%3b twinkler_dying%3b twinkler_hit%3b twinkler_dead%3b twinkler_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\thunderChickenThin_idle.fbx">
+      <Name>thunderChickenThin_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>thunderChicken_gaitWalk%3b thunderChickenThin_eatNoTentacle%3b thunderChicken_look%3b thunderChicken_hidden%3b thunderChicken_dead%3b thunderChicken_dying</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\thunderChickenBulky_idle.fbx">
+      <Name>thunderChickenBulky_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>thunderChicken_gaitWalk%3b thunderChicken_eat%3b thunderChicken_look%3b thunderChicken_hidden%3b thunderChicken_dead%3b thunderChicken_dying</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\snatcherArmored_idle.fbx">
+      <Name>snatcherArmored_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>snatcher_walk%3b snatcher_eat%3b snatcher_dead%3b snatcher_collapse%3b snatcher_combatIdle%3b snatcher_attack1%3b snatcher_attack2%3b snatcher_hit</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\twinklerThinSpiky_idle.fbx">
+      <Name>twinklerThinSpiky_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>twinkler_gaitWalk%3b twinkler_attackHighRight%3b twinkler_attackLowRight%3b twinkler_dying%3b twinkler_hit%3b twinkler_dead%3b twinkler_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\demonTreeMoss_idle.fbx">
+      <Name>demonTreeMoss_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>demonTree_attack%3b demonTree_combatIdle%3b demonTree_collapse%3b demonTree_dead%3b demonTree_walk%3b demonTree_hit%3b demonTree_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\dog_idle.fbx">
+      <Name>dog_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>dog_attack%3b dog_collapse%3b dog_combatIdle%3b dog_dead%3b dog_eat%3b dog_gaitGallop%3b dog_gaitTrot%3b dog_gaitWalk%3b dog_hit%3b dog_idleHowl%3b dog_lying%3b dog_lyingToStand%3b dog_sleep%3b dog_standToLying</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\robotHeavy_idle.fbx">
+      <Name>robotHeavy_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>robotHeavy_drop%3b robotHeavy_farming%3b robotHeavy_fold%3b  robotHeavy_idleUnfolded%3b  robotHeavy_pickup%3b robotHeavy_scan%3b robotHeavy_unfold</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\robotLight_idle.fbx">
+      <Name>robotLight_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>robotHeavy_fold%3b  robotHeavy_idleUnfolded%3b  robotHeavy_scan%3b robotHeavy_unfold%3b robotHeavy_farming</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\wormThin_idle.fbx">
+      <Name>wormThin_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedModelProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>worm_attack%3b worm_collapse%3b worm_combatIdle%3b worm_dead%3b worm_walk%3b worm_hit%3b worm_eat</ProcessorParameters_MergeAnimations>
+    </Compile>
+    <Compile Include="Models\pickaxe.fbx">
+      <Name>pickaxe</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\axe.fbx">
+      <Name>axe</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\shovel.fbx">
+      <Name>shovel</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <None Include="PhotoshopMathFP.hlsl">
+      <Name>PhotoshopMathFP</Name>
+    </None>
+    <Compile Include="RoadsAndPaths.fx">
+      <Name>RoadsAndPaths</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="RoundLine.fx">
+      <Name>RoundLine</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <None Include="SpriteShader.fxh">
+      <Name>SpriteShader</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_greengrass_base.png">
+      <Name>t_greengrass_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\GUISprites.xml">
+      <Name>GUISprites</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
+      <ProcessorParameters_ProcessGroundSprites>False</ProcessorParameters_ProcessGroundSprites>
+      <ProcessorParameters_ProcessOrdinarySprites>True</ProcessorParameters_ProcessOrdinarySprites>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\LCD_Cleaned.png">
+      <Name>LCD_Cleaned</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Comm\event_dust.png">
+      <Name>event_dust</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\LCD_Cleaned_more.png">
+      <Name>LCD_Cleaned_more</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\LCD_CircularReflex.png">
+      <Name>LCD_CircularReflex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\CRT_Lamp_Reflections_Small.png">
+      <Name>CRT_Lamp_Reflections_Small</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\GUI_CRT_Sprites.xml">
+      <Name>GUI_CRT_Sprites</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
+      <ProcessorParameters_ProcessGroundSprites>False</ProcessorParameters_ProcessGroundSprites>
+      <ProcessorParameters_ProcessOrdinarySprites>True</ProcessorParameters_ProcessOrdinarySprites>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\firegrass_base.png">
+      <Name>firegrass_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="terrain\muckroot_base.png">
+      <Name>muckroot_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\skimmer.fbx">
+      <Name>skimmer</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+      <ProcessorParameters_TextureFormat>NoChange</ProcessorParameters_TextureFormat>
+      <ProcessorParameters_EnvironmentMap>landscapeSquare.png</ProcessorParameters_EnvironmentMap>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\skimmeranimation.xml">
+      <Name>skimmeranimation</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OverlayEffect.fx">
+      <Name>OverlayEffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <None Include="Models\colonist_mananimation.xml">
+      <Name>colonist_mananimation</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GhostedBuildings.xml">
+      <Name>GhostedBuildings</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
+      <ProcessorParameters_Action>MakeGhostImage</ProcessorParameters_Action>
+      <ProcessorParameters_ProcessGroundSprites>False</ProcessorParameters_ProcessGroundSprites>
+      <ProcessorParameters_ProcessOrdinarySprites>True</ProcessorParameters_ProcessOrdinarySprites>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="overlayGradient.png">
+      <Name>overlayGradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OverlayGroundSpriteEffect.fx">
+      <Name>OverlayGroundSpriteEffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\box.fbx">
+      <Name>box</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\utility_vehicle.fbx">
+      <Name>utility_vehicle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+      <ProcessorParameters_DetailsMap>Models/utility_vehicle_details_256.tga</ProcessorParameters_DetailsMap>
+      <ProcessorParameters_DirtMap>Models/utility_vehicle_grunge_256.tga</ProcessorParameters_DirtMap>
+    </Compile>
+    <Compile Include="Models\sentry_idle.fbx">
+      <Name>sentry_idle</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>AnimatedVehicleProcessor</Processor>
+      <ProcessorParameters_MergeAnimations>sentry_activate%3b sentry_shoot%3b sentry_combatIdle</ProcessorParameters_MergeAnimations>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_humus_base.png">
+      <Name>t_humus_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_rocks_base.png">
+      <Name>t_rocks_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_sand_base.png">
+      <Name>t_sand_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\grid_test.png">
+      <Name>grid_test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="perlinBig.png">
+      <Name>perlinBig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="perlinMedium.png">
+      <Name>perlinMedium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_deepseabed_base.png">
+      <Name>t_deepseabed_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="terrain\t_muckrootthin_base.png">
+      <Name>t_muckrootthin_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="terrain\t_rocksseabed_base.png">
+      <Name>t_rocksseabed_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="terrain\t_seabed_base.png">
+      <Name>t_seabed_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_rocks_base_depthmap.png">
+      <Name>t_rocks_base_depthmap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>NormalMapProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_limestone_base.png">
+      <Name>t_limestone_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\blank.png">
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="MainMenu\gradient.png">
+      <Name>gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="smokeWhite.png">
+      <Name>smokeWhite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\panorama_1920px.png">
+      <Name>panorama_1920px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\title-text.png">
+      <Name>title-text</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Lamp_Reflection_Corner.png">
+      <Name>Lamp_Reflection_Corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\panorama_blue_1920px.jpg">
+      <Name>panorama_blue_1920px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+    <Folder Include="GUI\ActionPanel\" />
+    <Folder Include="GUI\Big CRT\" />
+    <Folder Include="GUI\Create Mission\" />
+    <Folder Include="GUI\CRT Content\" />
+    <Folder Include="GUI\DateAndWeather\" />
+    <Folder Include="GUI\Help screen\" />
+    <Folder Include="GUI\HUD windows\" />
+    <Folder Include="GUI\LCD Controls\" />
+    <Folder Include="GUI\Main menu\" />
+    <Folder Include="GUI\Main panel\" />
+    <Folder Include="GUI\Map GUI\" />
+    <Folder Include="GUI\Metal panel\" />
+    <Folder Include="GUI\Minimap\" />
+    <Folder Include="GUI\Plain\" />
+    <Folder Include="GUI\Policy screen\" />
+    <Folder Include="GUI\Status screen\" />
+    <Folder Include="itemBillboards\" />
+    <Folder Include="lightsources\" />
+    <Folder Include="overlays\" />
+    <Folder Include="Sounds\ambient\fireplace\" />
+    <Folder Include="Sounds\bow\" />
+    <Folder Include="structureBillboardsConstructAndBurnt\" />
+    <Folder Include="terrainBillboards\" />
+    <Folder Include="tiles\" />
+    <Folder Include="treeBillboards\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture1.tga">
+      <Name>patrician_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture2.tga">
+      <Name>patrician_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture3.tga">
+      <Name>patrician_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture4.tga">
+      <Name>patrician_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture5.tga">
+      <Name>patrician_texture5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture6.tga">
+      <Name>patrician_texture6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\patrician_texture7.tga">
+      <Name>patrician_texture7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinkler_texture1.tga">
+      <Name>twinkler_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinkler_texture2.tga">
+      <Name>twinkler_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinkler_texture3.tga">
+      <Name>twinkler_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinkler_texture4.tga">
+      <Name>twinkler_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture1.tga">
+      <Name>bird_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture2.tga">
+      <Name>bird_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture3.tga">
+      <Name>bird_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture4.tga">
+      <Name>bird_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture5.tga">
+      <Name>bird_texture5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\scarecrow_texture1.tga">
+      <Name>scarecrow_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\scarecrow_texture2.tga">
+      <Name>scarecrow_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\thunderChicken_texture1.tga">
+      <Name>thunderChicken_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\thunderChicken_texture2.tga">
+      <Name>thunderChicken_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bushback_texture2.tga">
+      <Name>bushback_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bushback_texture1.tga">
+      <Name>bushback_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\turnip_texture1.tga">
+      <Name>turnip_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\turnip_texture2.tga">
+      <Name>turnip_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_billowgrass_base.png">
+      <Name>t_billowgrass_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="waterbumpLargeWaves.png">
+      <Name>waterbumpLargeWaves</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="waterbumpFlipped.png">
+      <Name>waterbumpFlipped</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture3.tga">
+      <Name>man_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture4.tga">
+      <Name>man_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture5.tga">
+      <Name>man_texture5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture6.tga">
+      <Name>man_texture6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture7.tga">
+      <Name>man_texture7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture8.tga">
+      <Name>man_texture8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture9.tga">
+      <Name>man_texture9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GUI\Cursors\HUD_cursor.png">
+      <Name>HUD_cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\TauCetiMainMenu.wmv">
+      <Name>TauCetiMainMenu</Name>
+      <Importer>WmvImporter</Importer>
+      <Processor>VideoProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloudShadowTexture5.png">
+      <Name>CloudShadowTexture5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pollen.png">
+      <Name>pollen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fog.png">
+      <Name>fog</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\knife_texture.tga">
+      <Name>knife_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\machete_texture.tga">
+      <Name>machete_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\watergun_texture.tga">
+      <Name>watergun_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\watergunTank_texture.tga">
+      <Name>watergunTank_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bow_texture.tga">
+      <Name>bow_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\tablet_texture.tga">
+      <Name>tablet_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\melee\PUNCH1_02 - 9 Low Thud Punches.wav">
+      <Name>PUNCH1_02 - 9 Low Thud Punches</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\melee\BODYFALL1_46 - 5 Body Falls On Grass And Dirt.wav">
+      <Name>BODYFALL1_46 - 5 Body Falls On Grass And Dirt</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Martin Hasseldam - A New World %28Alt3%29 320kBit.mp3">
+      <Name>Martin Hasseldam - A New World %28Alt3%29 320kBit</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Martin Hasseldam - Settle.mp3">
+      <Name>Martin Hasseldam - Settle</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\angryToy.mp3">
+      <Name>angryToy</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\croaker.mp3">
+      <Name>croaker</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\twinklerStab.mp3">
+      <Name>twinklerStab</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\melee\swoosh.mp3">
+      <Name>swoosh</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\squirt\splish.mp3">
+      <Name>splish</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\melee\STAB2_24 - 4 Stabs With Blood.wav">
+      <Name>STAB2_24 - 4 Stabs With Blood</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\sliceSnap.mp3">
+      <Name>sliceSnap</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\sliceSnapDouble.mp3">
+      <Name>sliceSnapDouble</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\hummingClickClacking.mp3">
+      <Name>hummingClickClacking</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\toothCrickets.mp3">
+      <Name>toothCrickets</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\spacechicken.mp3">
+      <Name>spacechicken</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\rattleWooden.mp3">
+      <Name>rattleWooden</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\rattleWoodenShort.mp3">
+      <Name>rattleWoodenShort</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\bushdragonCombatIdle.mp3">
+      <Name>bushdragonCombatIdle</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\bushdragonHit.mp3">
+      <Name>bushdragonHit</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\rattleWoodenAmbient.mp3">
+      <Name>rattleWoodenAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\toothCricketsAmbient.mp3">
+      <Name>toothCricketsAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\angryToyAmbient.mp3">
+      <Name>angryToyAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\croakerAmbient.mp3">
+      <Name>croakerAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\hummingClickClackingAmbient.mp3">
+      <Name>hummingClickClackingAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\rattleBuzzAmbient.mp3">
+      <Name>rattleBuzzAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\spacechickenAmbient.mp3">
+      <Name>spacechickenAmbient</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GUI\Cursors\HUD_cursor_move.png">
+      <Name>HUD_cursor_move</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GUI\Cursors\HUD_cursor_scale_horiz.png">
+      <Name>HUD_cursor_scale_horiz</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GUI\Cursors\HUD_cursor_scale_vertical.png">
+      <Name>HUD_cursor_scale_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GUI\Cursors\HUD_cursor_scale_upright.png">
+      <Name>HUD_cursor_scale_upright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GUI\Cursors\HUD_cursor_scale_downright.png">
+      <Name>HUD_cursor_scale_downright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\bushdragonAttack_lowerVolume.mp3">
+      <Name>bushdragonAttack_lowerVolume</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\binalRat_texture1.tga">
+      <Name>binalRat_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu\TauCetiMainMenuBGOnly_1280px.jpg">
+      <Name>TauCetiMainMenuBGOnly_1280px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 1\Scenario Screen\aircraftWreck_scenario_thumb.png">
+      <Name>aircraftWreck_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 2\Scenario Screen\muckrootCamp_scenario_thumb.png">
+      <Name>muckrootCamp_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture10.tga">
+      <Name>man_texture10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture11.tga">
+      <Name>man_texture11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture12.tga">
+      <Name>man_texture12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture13.tga">
+      <Name>man_texture13</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture14.tga">
+      <Name>man_texture14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture15.tga">
+      <Name>man_texture15</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture16.tga">
+      <Name>man_texture16</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture17.tga">
+      <Name>man_texture17</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_texture18.tga">
+      <Name>man_texture18</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_textureClothes1.tga">
+      <Name>man_textureClothes1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes2.tga">
+      <Name>man_textureClothes2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes3.tga">
+      <Name>man_textureClothes3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes4.tga">
+      <Name>man_textureClothes4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes5.tga">
+      <Name>man_textureClothes5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes6.tga">
+      <Name>man_textureClothes6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\demonTree_texture1.tga">
+      <Name>demonTree_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\Scenario Screen\TitleImgSurvival_1920px.jpg">
+      <Name>TitleImgSurvival_1920px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 3\Scenario Screen\TitleImgBoat_1920px.jpg">
+      <Name>TitleImgBoat_1920px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 3\Scenario Screen\catamaranWreck_scenario_thumb.png">
+      <Name>catamaranWreck_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Type Icons\typeIcon_strippedCatamaran.png">
+      <Name>typeIcon_strippedCatamaran</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\spikePlant_texture1.tga">
+      <Name>spikePlant_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\worm_texture1.tga">
+      <Name>worm_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\snatcher_texture1.tga">
+      <Name>snatcher_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\cooking\cookingBoil.wav">
+      <Name>cookingBoil</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\eating\eatingCrunchy.wav">
+      <Name>eatingCrunchy</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\backpackHeavy_texture1.tga">
+      <Name>backpackHeavy_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\salvage\salvageAllDeeperLong.wav">
+      <Name>salvageAllDeeperLong</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\wind\windMidFreq.wav">
+      <Name>windMidFreq</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\insectsMediumGroup.wav">
+      <Name>insectsMediumGroup</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdsMediumGroup.wav">
+      <Name>birdsMediumGroup</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\goldenCenobite_texture1.tga">
+      <Name>goldenCenobite_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 4\Scenario Screen\TitleImgManFence_1920px.jpg">
+      <Name>TitleImgManFence_1920px</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\swampFrogs.wav">
+      <Name>swampFrogs</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\swampFrogs2.wav">
+      <Name>swampFrogs2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\swampFrogs3.wav">
+      <Name>swampFrogs3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\insectsLongConstantwBreak.wav">
+      <Name>insectsLongConstantwBreak</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\wormAmbienceSingle.wav">
+      <Name>wormAmbienceSingle</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\aliens\insectsSingleA.wav">
+      <Name>insectsSingleA</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\aliens\insectsSingleB.wav">
+      <Name>insectsSingleB</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingleA.wav">
+      <Name>birdSingleA</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\wind\windHighFreq.wav">
+      <Name>windHighFreq</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\waterBrook.wav">
+      <Name>waterBrook</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingHammer.wav">
+      <Name>buildingHammer</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingSteel.wav">
+      <Name>buildingSteel</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\coilrifleReload1b.wav">
+      <Name>coilrifleReload1b</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\coilrifleShot1a.wav">
+      <Name>coilrifleShot1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\coilrifleShot1b.wav">
+      <Name>coilrifleShot1b</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\coilrifleShot1c.wav">
+      <Name>coilrifleShot1c</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\coilrifleShot1d.wav">
+      <Name>coilrifleShot1d</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\extinguisherBoostShot1a.wav">
+      <Name>extinguisherBoostShot1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\bushdragonAttack1a.wav">
+      <Name>bushdragonAttack1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\bushdragonDeath1a.wav">
+      <Name>bushdragonDeath1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\bushdragonHit1a.wav">
+      <Name>bushdragonHit1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\bushdragonPoisonShot1a.wav">
+      <Name>bushdragonPoisonShot1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\poisonAlienImpact1a.wav">
+      <Name>poisonAlienImpact1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\wormAttackStart1a.wav">
+      <Name>wormAttackStart1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\wormDeath1a.wav">
+      <Name>wormDeath1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\wormHit1a.wav">
+      <Name>wormHit1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\snatcherAttack1a.wav">
+      <Name>snatcherAttack1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\snatcherDeath1a.wav">
+      <Name>snatcherDeath1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\snatcherHit1a.wav">
+      <Name>snatcherHit1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\wormAttackAction1a.wav">
+      <Name>wormAttackAction1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\binalRatDie1a.wav">
+      <Name>binalRatDie1a</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingleInAmbience.wav">
+      <Name>birdSingleInAmbience</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\wind\windMidFreq2.wav">
+      <Name>windMidFreq2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\wind\windHighFreq2.wav">
+      <Name>windHighFreq2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdsMediumGroup3.wav">
+      <Name>birdsMediumGroup3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle1A.wav">
+      <Name>birdSingle1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle1B.wav">
+      <Name>birdSingle1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle1C.wav">
+      <Name>birdSingle1C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle2A.wav">
+      <Name>birdSingle2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle2B.wav">
+      <Name>birdSingle2B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle2C.wav">
+      <Name>birdSingle2C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\insects\insectGroup1A.wav">
+      <Name>insectGroup1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\insects\insectGroup1B.wav">
+      <Name>insectGroup1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\insects\insectGroup1C.wav">
+      <Name>insectGroup1C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\gather\gatherHandKneelDig.wav">
+      <Name>gatherHandKneelDig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\gather\gatherCutLow.wav">
+      <Name>gatherCutLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\gather\gatherHandGatherStand.wav">
+      <Name>gatherHandGatherStand</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\gather\gatherHandKneelDig1.wav">
+      <Name>gatherHandKneelDig1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\gather\gatherChopLow2.wav">
+      <Name>gatherChopLow2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\waterRiverMediumStreamA.wav">
+      <Name>waterRiverMediumStreamA</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\waterRiverMediumStreamB.wav">
+      <Name>waterRiverMediumStreamB</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\waterRiverMediumStreamC.wav">
+      <Name>waterRiverMediumStreamC</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle3A.wav">
+      <Name>birdSingle3A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle3B.wav">
+      <Name>birdSingle3B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\wind\windHighFreqGustyLong1A.wav">
+      <Name>windHighFreqGustyLong1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\wind\windHighFreqGustyLong1B.wav">
+      <Name>windHighFreqGustyLong1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\wind\windHighFreqGustyLong1C.wav">
+      <Name>windHighFreqGustyLong1C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\waterBrookSmallA.wav">
+      <Name>waterBrookSmallA</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\waterBrookSmallB.wav">
+      <Name>waterBrookSmallB</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\waterBrookSmallC.wav">
+      <Name>waterBrookSmallC</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle4A.wav">
+      <Name>birdSingle4A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle4B.wav">
+      <Name>birdSingle4B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle4C.wav">
+      <Name>birdSingle4C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle4D.wav">
+      <Name>birdSingle4D</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle5A.wav">
+      <Name>birdSingle5A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle5B.wav">
+      <Name>birdSingle5B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\birds\birdSingle5C.wav">
+      <Name>birdSingle5C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\birds\birdSingle5D.wav">
+      <Name>birdSingle5D</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\shoreWavesCalm2A.wav">
+      <Name>shoreWavesCalm2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\shoreWavesCalm2B.wav">
+      <Name>shoreWavesCalm2B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\shoreWavesCalm2C.wav">
+      <Name>shoreWavesCalm2C</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\insects\insectFlying1A.wav">
+      <Name>insectFlying1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\insects\insectFlying1B.wav">
+      <Name>insectFlying1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\farming\farmingHoeDirtSoil1A.wav">
+      <Name>farmingHoeDirtSoil1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\farming\farmingHoeDirtSoil1B.wav">
+      <Name>farmingHoeDirtSoil1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\gather\gatherHandGather3.wav">
+      <Name>gatherHandGather3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\salvage\salvageBreakMetal1.wav">
+      <Name>salvageBreakMetal1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\salvage\salvageBreakMetal2.wav">
+      <Name>salvageBreakMetal2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\salvage\salvagePullMetal.wav">
+      <Name>salvagePullMetal</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\melee\kickHard1B.wav">
+      <Name>kickHard1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\kickHard2B.wav">
+      <Name>kickHard2B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\melee\punchLight1.wav">
+      <Name>punchLight1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\punchLight2.wav">
+      <Name>punchLight2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\punchLight3.wav">
+      <Name>punchLight3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\swooshClothHigh1.wav">
+      <Name>swooshClothHigh1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\swooshClothHigh2.wav">
+      <Name>swooshClothHigh2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\swooshClothHigh3.wav">
+      <Name>swooshClothHigh3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\swooshClothLow1.wav">
+      <Name>swooshClothLow1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\melee\swooshClothLow2.wav">
+      <Name>swooshClothLow2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\macheteImpaleHard.wav">
+      <Name>macheteImpaleHard</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\macheteImpaleHardB.wav">
+      <Name>macheteImpaleHardB</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\macheteImpaleHardC.wav">
+      <Name>macheteImpaleHardC</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\macheteImpaleHardD.wav">
+      <Name>macheteImpaleHardD</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\knifeStab1A.wav">
+      <Name>knifeStab1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\knifeStabBloody1A.wav">
+      <Name>knifeStabBloody1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\knifeStabBloody1B.wav">
+      <Name>knifeStabBloody1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\bow\arrowImpact2A.wav">
+      <Name>arrowImpact2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\bow\bowAim2A.wav">
+      <Name>bowAim2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\bow\bowReload2A.wav">
+      <Name>bowReload2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\bow\bowShot2A.wav">
+      <Name>bowShot2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingElectronic1.wav">
+      <Name>buildingElectronic1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingElectronic2.wav">
+      <Name>buildingElectronic2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\coilRifle\coilrifleShotHard.wav">
+      <Name>coilrifleShotHard</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\shoreWavesCalmLonger3A.wav">
+      <Name>shoreWavesCalmLonger3A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\shoreWavesCalmLonger3B.wav">
+      <Name>shoreWavesCalmLonger3B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingTarpKneelDig.wav">
+      <Name>buildingTarpKneelDig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingTarpKneelWaterDevice.wav">
+      <Name>buildingTarpKneelWaterDevice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingTarpMend.wav">
+      <Name>buildingTarpMend</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingTarpImprovisedKneelDig.wav">
+      <Name>buildingTarpImprovisedKneelDig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingTarpImprovisedKneelWaterDevice.wav">
+      <Name>buildingTarpImprovisedKneelWaterDevice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingTarpImprovisedMend.wav">
+      <Name>buildingTarpImprovisedMend</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingMetalKneelDig.wav">
+      <Name>buildingMetalKneelDig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingMetalKneelWaterDevice.wav">
+      <Name>buildingMetalKneelWaterDevice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingMetalMend.wav">
+      <Name>buildingMetalMend</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\mudflats1.wav">
+      <Name>mudflats1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\mudflats2.wav">
+      <Name>mudflats2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\ambient\water\mudflatsCompressed1.wav">
+      <Name>mudflatsCompressed1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\ambient\water\mudflatsCompressed2.wav">
+      <Name>mudflatsCompressed2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\salvage\salvageMetalCutLow.wav">
+      <Name>salvageMetalCutLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\butcher\butcherChopLow.wav">
+      <Name>butcherChopLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\butcher\butcherConstructPull.wav">
+      <Name>butcherConstructPull</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\butcher\butcherCutLow.wav">
+      <Name>butcherCutLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\butcher\butcherSharpen.wav">
+      <Name>butcherSharpen</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\butcher\butcherGather.wav">
+      <Name>butcherGather</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\building\buildingImprovisedKneelDig.wav">
+      <Name>buildingImprovisedKneelDig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingImprovisedKneelWaterDevice.wav">
+      <Name>buildingImprovisedKneelWaterDevice</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\building\buildingImprovisedMend.wav">
+      <Name>buildingImprovisedMend</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\crafting\craftingGeneral1.wav">
+      <Name>craftingGeneral1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\crafting\craftingGeneral2.wav">
+      <Name>craftingGeneral2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\thunderChickenBulky_texture1.tga">
+      <Name>thunderChickenBulky_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChickenBulky_texture2.tga">
+      <Name>thunderChickenBulky_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChickenBulky_texture3.tga">
+      <Name>thunderChickenBulky_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChickenThin_texture1.tga">
+      <Name>thunderChickenThin_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChickenThin_texture2.tga">
+      <Name>thunderChickenThin_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\thunderChickenThin_texture3.tga">
+      <Name>thunderChickenThin_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\demonTreeMoss_texture1.tga">
+      <Name>demonTreeMoss_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\demonTreeMoss_texture2.tga">
+      <Name>demonTreeMoss_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\demonTreeMoss_texture3.tga">
+      <Name>demonTreeMoss_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\snatcherArmored_texture1.tga">
+      <Name>snatcherArmored_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\crafting\craftingGeneral1b.wav">
+      <Name>craftingGeneral1b</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\crafting\craftingGeneral2b.wav">
+      <Name>craftingGeneral2b</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinklerThin_texture1.tga">
+      <Name>twinklerThin_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\twinklerThinSpiky_texture1.tga">
+      <Name>twinklerThinSpiky_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\dogShepherd_texture1.tga">
+      <Name>dogShepherd_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\wormThin_texture1.tga">
+      <Name>wormThin_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\robot_texture1.tga">
+      <Name>robot_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\robot_texture1.tga">
+      <Name>robot_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryBurstCasingsHigh.wav">
+      <Name>sentryBurstCasingsHigh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryBurstCasingsLow.wav">
+      <Name>sentryBurstCasingsLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryHardBurst.wav">
+      <Name>sentryHardBurst</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryHardSingle.wav">
+      <Name>sentryHardSingle</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryMedium2Burst.wav">
+      <Name>sentryMedium2Burst</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryMedium2Single.wav">
+      <Name>sentryMedium2Single</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryMediumBurst.wav">
+      <Name>sentryMediumBurst</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentryMediumSingle.wav">
+      <Name>sentryMediumSingle</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentrySingleCasingsHigh.wav">
+      <Name>sentrySingleCasingsHigh</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\weapons\sentryGun\sentrySingleCasingsLow.wav">
+      <Name>sentrySingleCasingsLow</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\traps\mineDetonateBeep.wav">
+      <Name>mineDetonateBeep</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\traps\mineExplosionHardwDebris.wav">
+      <Name>mineExplosionHardwDebris</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\domesticated\dog\dogAttackBark1.wav">
+      <Name>dogAttackBark1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogAttackBark2.wav">
+      <Name>dogAttackBark2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogAttackSnarl1.wav">
+      <Name>dogAttackSnarl1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogAttackSnarl2.wav">
+      <Name>dogAttackSnarl2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogBark1A.wav">
+      <Name>dogBark1A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogBark1B.wav">
+      <Name>dogBark1B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogBark2A.wav">
+      <Name>dogBark2A</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogBark2B.wav">
+      <Name>dogBark2B</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogEat.wav">
+      <Name>dogEat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogHitBark1.wav">
+      <Name>dogHitBark1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogHitBark2.wav">
+      <Name>dogHitBark2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogHitWhimper1.wav">
+      <Name>dogHitWhimper1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\domesticated\dog\dogHitWhimper2.wav">
+      <Name>dogHitWhimper2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\activities\robots\robotDriveElectronicBig.wav">
+      <Name>robotDriveElectronicBig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotDriveElectronicMedium.wav">
+      <Name>robotDriveElectronicMedium</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotDriveElectronicSmall.wav">
+      <Name>robotDriveElectronicSmall</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotDriveEngineBig.wav">
+      <Name>robotDriveEngineBig</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotDriveEngineMedium.wav">
+      <Name>robotDriveEngineMedium</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotDriveEngineSmall.wav">
+      <Name>robotDriveEngineSmall</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotServoArms.wav">
+      <Name>robotServoArms</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\activities\robots\robotServoArms2.wav">
+      <Name>robotServoArms2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 4\Scenario Screen\colonyFarmDogRobot_scenario_thumb.png">
+      <Name>colonyFarmDogRobot_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture3b.tga">
+      <Name>bird_texture3b</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture5b.tga">
+      <Name>bird_texture5b</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\bird_texture5c.tga">
+      <Name>bird_texture5c</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Martin Hasseldam - Unfamiliar Starlight.mp3">
+      <Name>Martin Hasseldam - Unfamiliar Starlight</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Martin Hasseldam - Life in the Wilderness.mp3">
+      <Name>Martin Hasseldam - Life in the Wilderness</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_texture.tga">
+      <Name>man_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_textureClothes10.tga">
+      <Name>man_textureClothes10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes11.tga">
+      <Name>man_textureClothes11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes12.tga">
+      <Name>man_textureClothes12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes13.tga">
+      <Name>man_textureClothes13</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes14.tga">
+      <Name>man_textureClothes14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes15.tga">
+      <Name>man_textureClothes15</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes16.tga">
+      <Name>man_textureClothes16</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes17.tga">
+      <Name>man_textureClothes17</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes18.tga">
+      <Name>man_textureClothes18</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes19.tga">
+      <Name>man_textureClothes19</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_textureClothes20.tga">
+      <Name>man_textureClothes20</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes21.tga">
+      <Name>man_textureClothes21</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes22.tga">
+      <Name>man_textureClothes22</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes23.tga">
+      <Name>man_textureClothes23</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes24.tga">
+      <Name>man_textureClothes24</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes25.tga">
+      <Name>man_textureClothes25</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes26.tga">
+      <Name>man_textureClothes26</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\man_textureClothes7.tga">
+      <Name>man_textureClothes7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes8.tga">
+      <Name>man_textureClothes8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\man_textureClothes9.tga">
+      <Name>man_textureClothes9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\GUI\regionalMap_1.png">
+      <Name>regionalMap_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\GUI\regionalMap_2.png">
+      <Name>regionalMap_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\snatcher_texture3.tga">
+      <Name>snatcher_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcher_texture4.tga">
+      <Name>snatcher_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcher_texture5.tga">
+      <Name>snatcher_texture5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcher_texture6.tga">
+      <Name>snatcher_texture6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcher_texture7.tga">
+      <Name>snatcher_texture7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\snatcherArmored_texture2.tga">
+      <Name>snatcherArmored_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcherArmored_texture3.tga">
+      <Name>snatcherArmored_texture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Models\snatcherArmored_texture4.tga">
+      <Name>snatcherArmored_texture4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Jesper Lundager - Building a Home_320.mp3">
+      <Name>Jesper Lundager - Building a Home_320</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Jesper Lundager - Cetian Skies_320.mp3">
+      <Name>Jesper Lundager - Cetian Skies_320</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Jesper Lundager - Muckroot Toil_320.mp3">
+      <Name>Jesper Lundager - Muckroot Toil_320</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Jesper Lundager - Prosperous Frontier_320.mp3">
+      <Name>Jesper Lundager - Prosperous Frontier_320</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Jesper Lundager - The Diamond Birds_320.mp3">
+      <Name>Jesper Lundager - The Diamond Birds_320</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\GUI\regionalMap_3.png">
+      <Name>regionalMap_3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 5\Scenario Screen\parasolHouse_scenario_thumb.png">
+      <Name>parasolHouse_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="terrain\t_vulcanic_base.png">
+      <Name>t_vulcanic_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\GUI\regionalMap_4.png">
+      <Name>regionalMap_4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\wormSimple_texture1.tga">
+      <Name>wormSimple_texture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\wormSimple_texture2.tga">
+      <Name>wormSimple_texture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Default\GUI\regionalMap_5.png">
+      <Name>regionalMap_5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenarios\Scenario 6\Scenario Screen\clayPit_scenario_thumb.png">
+      <Name>clayPit_scenario_thumb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\flutter_Mat43_v2.wav">
+      <Name>flutter_Mat43_v2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Sounds\aliens\alienCombat\humming_Mat8_v2.wav">
+      <Name>humming_Mat8_v2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sounds\aliens\alienCombat\strumming_Mat25_v1.wav">
+      <Name>strumming_Mat25_v1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+</Project>

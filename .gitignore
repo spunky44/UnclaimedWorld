@@ -1,0 +1,12 @@
+.vs/
+bin/
+obj/
+TestResults/
+packages/
+*.user
+*.suo
+*.sln.docstates
+*.cache
+*.csproj.FileListAbsolute.txt
+*.pubxml.user
+*.log

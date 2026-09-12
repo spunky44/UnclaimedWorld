@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Framework:Curve">
+    <PreLoop>Constant</PreLoop>
+    <PostLoop>Constant</PostLoop>
+    <Keys>-4.5 230 0 0 Smooth 0.61 230 0 0 Smooth 77 0 0 0 Smooth 191 0 0 0 Smooth 234.606 61.751 165.362167 64.63784 Smooth 251.651 230 0 0 Smooth</Keys>
+  </Asset>
+</XnaContent>

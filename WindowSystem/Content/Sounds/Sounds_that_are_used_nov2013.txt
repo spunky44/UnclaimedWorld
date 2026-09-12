@@ -1,0 +1,15 @@
+the sounds used:...are listed in GUIManager.cs:
+
+BIP2.wav
+CLICK14A
+
+button beeps/basicpanel button 2
+button beeps/lcd_buttonclick
+button beeps/mainpanel button
+button beeps/metalpanel button
+typing/typing
+tv/tvturnon
+tv/whitenoise
+
+
+Visual Studio UI Sounds

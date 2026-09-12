@@ -1,0 +1,66 @@
+not necessary to open fbx in maya to see length of anim, just åben fbx med notepad, edit_find... keyCount
+
+keycount counts bindpose as one key.
+
+We assume that Morten always makes frame 0 (and only that) contain the bindpose.
+
+SO WE IGNORE/SKIP 1st frame (bindpose) AUTOMATICALLY WHEN PLAYING ANIMATIONS!!!
+SO SUBTRACT 1 FROM ALL KEYCOUNTS!!!
+This will give the correct numbers to feed into the animation player.
+
+Framerate: 25/s => 0,04 s per frame
+
+man_attackPunchHighRight 16 (15 * 0,04) = 0,6
+man_attackPunchLowRight keyCount says 22, but this is wrong...fbx has been exported with one too many still keys at the end...cycle ends at 21. 20*0,04= 0,8
+man_attackPunchRightMiss 19 (20)  //this one ends with one extra static key (18 * 0,04) = 0,72
+man_attackSnapkickRight 13 = 0,48
+man_attackStompRight 17 = 0,64
+man_combatCollapse 19 (40)   //this one ends with lots of static keys (18 * 0,04) = 0,72
+man_attackSpearMid 22 (21*0,04)=  0,84
+
+man_combatHit 23
+man_combatidle 101
+man_combatIdleUnarmed 3
+man_dead 3
+man_dying 100
+
+man_pickupHeavy 18 (17*0,04)   =0,68    ......actionpoint(with bindpose=0): 9 (8 = 0,32)
+man_pickupLight 31 = 1,2		......actionpoint(with bindpose=0): 15 (14 = 0,56)
+man_pickupLightSame 32 = 1,24		......actionpoint(with bindpose=0): 15 (0,56)
+man_pickupEquipped 44 1,72		......actionpoint(with bindpose=0): 13 (12 = 0,48)
+man_pickupMounted 25 = 0,96		...actionpoint(with bindpose=0): 13 (12 = 0,48)
+man_pickupMountedEquipped 44 = 	1,72	...actionpoint(with bindpose=0): 14 (13 = 0,52)
+
+man_dropHeavy 24 (23*0,04)= 0,92     	...actionpoint(with bindpose=0): 12 (11 = 0,44)
+man_dropEquipped 34 = 1,32		...actionpoint(with bindpose=0): 21 (20 = 0,8)
+man_dropLight 31 = 1,2			...actionpoint(with bindpose=0): 17 (16 = 0,64)
+man_dropMounted 25  (24*0,04) = 0,96	...actionpoint(with bindpose=0): 10 (9  = 0,36)
+man_dropLightSame 31 = 1,2		...actionpoint(with bindpose=0): 15 (14 = 0,56)
+man_dropMountedSame 34=1,32		...actionpoint(with bindpose=0): 20 (19 = 0,76)
+
+
+man_haulLight  3 (2*0,04)= 0,08
+
+
+man_sittingIdle 214 frames
+
+patrician_attackHighDouble 24 = 0,92
+patrician_attackLowRight 26 = 1
+patrician_combatIdle 79 = 3,12
+patrician_hit  14
+patrician_collapse 13
+
+
+scarecrow_idle 211
+scarecrow_scare 14 = 0,52
+scarecrow_hit 8
+
+
+thunderChicken_idle 131
+
+
+twinkler_attackHighRight 26 (25*0,04)=1
+twinkler_attackLowRight 18 (17*0,04)=0.68
+twinkler_hit 13 
+
+bushback_collapse 40

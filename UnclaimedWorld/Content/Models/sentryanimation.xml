@@ -1,0 +1,19 @@
+﻿<animation>
+  <name>Take 001</name>
+  <tickspersecond>25</tickspersecond>
+ <!--  <animationsubset>
+    <name>activate</name>
+    <startframe>2</startframe>
+    <endframe>4</endframe>  77    
+  </animationsubset>--> 
+  <animationsubset>
+    <name>activate</name>
+    <startframe>1</startframe> <!-- 81 -->
+    <endframe>80</endframe>
+  </animationsubset>
+  <animationsubset>
+    <name>idle</name>
+    <startframe>81</startframe>
+    <endframe>206</endframe> 
+  </animationsubset>
+</animation>

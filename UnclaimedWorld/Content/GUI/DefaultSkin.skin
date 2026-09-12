@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Skin>
+	<WindowSystem.GUIManager
+		SkinTextureFileName = "Content/Textures/DefaultStyle"
+		   />
+	<WindowSystem.MouseCursor
+		NormalLocation = "114,67,12,21"
+        MovingLocation = "127,67,21,21"
+        ResizingNSLocation = "149,67,9,21"
+        ResizingWELocation = "159,67,21,9"
+        ResizingNWSELocation = "181,67,15,15"
+        ResizingNESWLocation = "197,67,15,15"
+		NormalOffset = "0,0"
+        MovingOffset = "-10,-10"
+        ResizingNSOffset = "-4,-10"
+        ResizingWEOffset = "-10,-4"
+        ResizingNWSEOffset = "-7,-7"
+        ResizingNESWOffset = "-7,-7"
+		   />
+	<WindowSystem.Bar
+		EdgeSize="5"
+			/>
+	<WindowSystem.Box
+		CornerSize="5"
+			/>
+	<WindowSystem.CheckBox
+		Height = "15"
+		HMargin = "5"
+		Font = "Content/Fonts/DefaultFont"
+		Skin = "1,7,5,15"
+		HoverSkin = "17,27,15,15"
+		PressedSkin = "33,27,15,15"
+		CheckedSkin = "1,43,15,15"
+		CheckedHoverSkin = "17,43,15,15"
+		CheckedPressedSkin = "33,43,15,15"
+			/>
+	<WindowSystem.ComboBox
+		Width = "200"
+        Height = "20"
+        ButtonSkin = "138,5,20,20"
+        ButtonHoverSkin = "159,5,20,20"
+        ButtonPressedSkin = "180,5,20,20"
+			/>
+	<WindowSystem.Label
+		Font = "Content/Fonts/DefaultFont"
+        Color = "0,0,0,255"
+			/>
+	<WindowSystem.ListBox
+		Width = "200"
+        Height = "150"
+        HMargin = "5"
+        VMargin = "2"
+        Font = "Content/Fonts/DefaultFont"
+        Skin = "84,41,25,25"
+			/>
+	<WindowSystem.MenuBar
+		HMargin = "5"
+        VMargin = "2"
+        Skin = "78,67,13,15"
+			/>
+	<WindowSystem.MenuItem
+		HMargin = "5"
+        VMargin = "2"
+        HighlightSkin = "61,67,15,15"
+        ArrowSkin = "114,43,4,7"
+			/>
+	<WindowSystem.MessageBox
+		InfoSkin = "1,91,25,25"
+        ErrorSkin = "27,91,25,25"
+        WarningSkin = "53,91,25,25"
+        QuestionSkin = "79,91,25,25"
+			/>
+	<WindowSystem.PopUpMenu
+		HMargin = "2"
+        VMargin = "2"
+        Skin = "84,41,25,25"
+		   />
+	<WindowSystem.RadioButton
+		Skin = "1,59,15,15"
+        HoverSkin = "17,59,15,15"
+        PressedSkin = "33,59,15,15"
+        CheckedSkin = "1,75,15,15"
+        CheckedHoverSkin = "17,75,15,15"
+        CheckedPressedSkin = "33,75,15,15"
+		   />
+	<WindowSystem.ScrollBar
+		ButtonSize = "50"
+        BackgroundSkin = "66,5,17,17"
+        TopButtonSkin = "84,23,17,17"
+        TopButtonHoverSkin = "102,23,17,17"
+        TopButtonPressedSkin = "120,23,17,17"
+        BottomButtonSkin = "84,5,17,17"
+        BottomButtonHoverSkin = "102,5,17,17"
+        BottomButtonPressedSkin = "120,5,17,17"
+        ThumbSkin = "66,23,17,10"
+        ThumbHoverSkin = "66,34,17,10"
+        ThumbPressedSkin = "66,45,17,10"
+		   />
+	<WindowSystem.TextBox
+		Width = "260"
+        Height = "25"
+        HMargin = "5"
+        VMargin = "2"
+        Font = "Content/Fonts/DefaultFont"
+        Skin = "84,41,25,25"
+		   />
+	<WindowSystem.TextButton
+		Width = "65"
+        Height = "25"
+        EdgeSize = "12"
+        Font = "Content/Fonts/DefaultFont"
+        Skin = "1,142,25,25"
+        HoverSkin = "27,142,25,25"
+        PressedSkin = "52,142,25,25"
+		   />
+	<WindowSystem.Window
+		HasCloseButton = "true"
+        HasFullWindowMovableArea = "true"
+        TitleBarHeight = "24"
+        ButtonSize = "20"
+        Margin = "5"
+        TitleFont = "Content/Fonts/DefaultHeading"
+        Skin = "15,1,15,15"
+        TitleBarSkin = "1,1,13,25"
+        CloseButtonSkin = "1,168,20,20"
+        CloseButtonHoverSkin = "22,168,20,20"
+        CloseButtonPressedSkin = "43,168,20,20"
+		   />
+</Skin>

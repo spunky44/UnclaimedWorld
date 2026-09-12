@@ -1,0 +1,22 @@
+<root>
+  <includebones>
+    <name>SpineA</name>
+    <name>SpineB</name>
+    <name>SpineC</name>
+    <name>SpineD</name>
+    <name>Neck</name>
+    <name>Head</name>
+    <name>ShoulderRight</name>
+    <name>UpperArmRight</name>
+    <name>ForeArmRight</name>
+    <name>PalmRight</name>
+    <name>FingerRightA</name>
+    <name>FingerRightEnd</name>
+    <name>ShoulderLeft</name>
+    <name>UpperArmLeft</name>
+    <name>ForeArmLeft</name>
+    <name>PalmLeft</name>
+    <name>FingerLeftA</name>
+    <name>FingerLeftEnd</name>
+  </includebones>
+</root>

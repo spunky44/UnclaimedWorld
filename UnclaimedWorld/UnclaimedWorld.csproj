@@ -1,0 +1,1564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4660523-C1F5-46BA-89B5-0BB6FCE62770}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UWGame</RootNamespace>
+    <AssemblyName>UnclaimedWorld</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 64 bit|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug 64 bit\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 64 bit|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 64 bit|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug 64 bit\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Profile|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Profile\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Profile|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Profile\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Profile|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Windows\Profile\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS PROFILE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Client\Audio\AudioManager.cs" />
+    <Compile Include="Client\Audio\SoundData.cs" />
+    <Compile Include="Client\BloomComponent.cs" />
+    <Compile Include="Client\BloomSettings.cs" />
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\FeatureQuad.cs" />
+    <Compile Include="Client\Feedback\AccessibilityFeedback.cs" />
+    <Compile Include="Client\Feedback\FeedbackManager.cs" />
+    <Compile Include="Client\Feedback\ReplenishFeedback.cs" />
+    <Compile Include="Client\GameEvents\EventActionDialog.cs" />
+    <Compile Include="Client\GameEvents\LogAction.cs" />
+    <Compile Include="Client\GameEvents\MusicAction.cs" />
+    <Compile Include="Client\GameEvents\ParticleEffectAction.cs" />
+    <Compile Include="Client\GameEvents\SetViewAction.cs" />
+    <Compile Include="Client\GameEvents\ShowTutorialAction.cs" />
+    <Compile Include="Client\GameEvents\SoundEffectAction.cs" />
+    <Compile Include="Client\HelpTopics\HelpTopic.cs" />
+    <Compile Include="Client\Hints\Hint.cs" />
+    <Compile Include="Client\IDrawable.cs" />
+    <Compile Include="Client\Interface\BuildButtonEventArgs.cs" />
+    <Compile Include="Client\Interface\BuyAndSell\BuySellPanel.cs" />
+    <Compile Include="Client\Interface\BuyAndSell\BuySellPanelSettings.cs" />
+    <Compile Include="Client\Interface\CommonInterface.cs" />
+    <Compile Include="Client\Interface\Controls\EntityTypeButton.cs" />
+    <Compile Include="Client\Interface\Controls\ErrorAndMessagePanel.cs" />
+    <Compile Include="Client\Interface\Controls\ModalOverlay.cs" />
+    <Compile Include="Client\Interface\Controls\ProductionOrderControl.cs" />
+    <Compile Include="Client\Interface\Controls\SortingButtons.cs" />
+    <Compile Include="Client\Interface\Controls\StockButton.cs" />
+    <Compile Include="Client\Interface\CounterPanel.cs" />
+    <Compile Include="Client\Interface\CRTAnimator.cs" />
+    <Compile Include="Client\Interface\CRTNoise.cs" />
+    <Compile Include="Client\Interface\CRTQuad.cs" />
+    <Compile Include="Client\Interface\CRTScreen.cs" />
+    <Compile Include="Client\Interface\CRTTextAnimator.cs" />
+    <Compile Include="Client\Interface\DateAndWeatherPanel\DateAndWeather.cs" />
+    <Compile Include="Client\Interface\DateAndWeatherPanel\HUDDateAndWeather.cs" />
+    <Compile Include="Client\Interface\DiplomacyPanel.cs" />
+    <Compile Include="Client\Interface\DisplayPanelRenderer.cs" />
+    <Compile Include="Client\Interface\DisplayScreen.cs" />
+    <Compile Include="Client\Interface\Editor\Controls\Toolbar.cs" />
+    <Compile Include="Client\Interface\Editor\IEditorPanel.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\IHasAlphaOption.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\IHasRadiusOption.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\MapTool.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\Paintbrush.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\Eraser.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\Pencil.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\AlphaOption.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\RadiusOption.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\AlphaSetting.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\RadiusSetting.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\Setting.cs" />
+    <Compile Include="Client\Interface\Editor\MapTools\ToolOption.cs" />
+    <Compile Include="Client\Interface\EntityPanel\CombatHistory.cs" />
+    <Compile Include="Client\Interface\EntityPanel\EntityCRTContent.cs" />
+    <Compile Include="Client\Interface\EntityPanel\EntityPanel.cs" />
+    <Compile Include="Client\Interface\EntityPanel\EntityPanelTabPage.cs" />
+    <Compile Include="Client\Interface\EntityPanel\History.cs" />
+    <Compile Include="Client\Interface\EntityPanel\SkillsAndAttributes.cs" />
+    <Compile Include="Client\Interface\EntityTypeTooltipChangeableData.cs" />
+    <Compile Include="Client\Interface\EventArchivePanel.cs" />
+    <Compile Include="Client\Interface\EventDialog.cs" />
+    <Compile Include="Client\Interface\EventDialogData.cs" />
+    <Compile Include="Client\Interface\ExpandedPanel.cs" />
+    <Compile Include="Client\Interface\FramedCRT.cs" />
+    <Compile Include="Client\Interface\FullLCDPanel.cs" />
+    <Compile Include="Client\Interface\HUD Windows\AttackWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDOverlayPanel.cs" />
+    <Compile Include="Client\Interface\Inventory\SearchTextSetting.cs" />
+    <Compile Include="Client\Interface\Ledger\Kills.cs" />
+    <Compile Include="Client\Interface\Ledger\KillsSettings.cs" />
+    <Compile Include="Client\Interface\Ledger\ProductionSettings.cs" />
+    <Compile Include="Client\Interface\Ledger\Production.cs" />
+    <Compile Include="Client\Interface\Ledger\NutrientSheetSettings.cs" />
+    <Compile Include="Client\Interface\Ledger\NutrientsSheet.cs" />
+    <Compile Include="Client\Interface\Ledger\FoodProduction.cs" />
+    <Compile Include="Client\Interface\Ledger\LedgerPanel.cs" />
+    <Compile Include="Client\Interface\GraphPanel.cs" />
+    <Compile Include="Client\Interface\GUIConstants.cs" />
+    <Compile Include="Client\Interface\HUD Windows\ContextMenuOpener.cs" />
+    <Compile Include="Client\Interface\HUD Windows\DataTypeTooltip.cs" />
+    <Compile Include="Client\Interface\HUD Windows\EntityActivityHUDWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\EntityListWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\EntityTypeTooltip.cs" />
+    <Compile Include="Client\Interface\HUD Windows\EventLogAlert.cs" />
+    <Compile Include="Client\Interface\HUD Windows\GatherResourcePopup.cs" />
+    <Compile Include="Client\Interface\HUD Windows\GatherResourcesWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HelpTopicDialog.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDEntityActionPanel.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDEventLog.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDHelpPanel.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDPopup.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDTalkPanel.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HUDWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\HuntWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\MarkerWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\PatrolWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\ProcessTypeTooltip.cs" />
+    <Compile Include="Client\Interface\HUD Windows\SetTileResourcesPopup.cs" />
+    <Compile Include="Client\Interface\HUD Windows\SetTileResourcesWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\SpokenLine.cs" />
+    <Compile Include="Client\Interface\HUD Windows\StockpileWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\TextWindow.cs" />
+    <Compile Include="Client\Interface\HUD Windows\TileSelectionContextMenu.cs" />
+    <Compile Include="Client\Interface\HUD Windows\ToolGrid.cs" />
+    <Compile Include="Client\Interface\HUD Windows\Tooltip.cs" />
+    <Compile Include="Client\Interface\HUD Windows\UpgradeWindow.cs" />
+    <Compile Include="Client\Interface\IconInfo.cs" />
+    <Compile Include="Client\Interface\InGameInterface.cs" />
+    <Compile Include="Client\Interface\InGameMenuDialog.cs" />
+    <Compile Include="Client\Interface\Inventory\AttainableInfo.cs" />
+    <Compile Include="Client\Interface\Inventory\CategoryFilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\ExcludedEntityType.cs" />
+    <Compile Include="Client\Interface\Inventory\FilterPropertiesPanel.cs" />
+    <Compile Include="Client\Interface\Inventory\FilterPropertySettings.cs" />
+    <Compile Include="Client\Interface\Inventory\FilterSetting.cs" />
+    <Compile Include="Client\Interface\Inventory\FilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\InventoryPanel.cs" />
+    <Compile Include="Client\Interface\Inventory\InventorySettings.cs" />
+    <Compile Include="Client\Interface\Inventory\NutrientFilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\PolicyAreaFilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\StaticFilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\TierFilterSettingType.cs" />
+    <Compile Include="Client\Interface\Inventory\TrackedEntityType.cs" />
+    <Compile Include="Client\Interface\Layout\ImageElement.cs" />
+    <Compile Include="Client\Interface\Layout\LayoutElement.cs" />
+    <Compile Include="Client\Interface\Layout\TextElement.cs" />
+    <Compile Include="Client\Interface\LCDQuad.cs" />
+    <Compile Include="Client\Interface\LCDScreen.cs" />
+    <Compile Include="Client\Interface\LCD\ErrorsAndMessages.cs" />
+    <Compile Include="Client\Interface\LCD\LCDInnerPanel.cs" />
+    <Compile Include="Client\Interface\Ledger\LedgerSheet.cs" />
+    <Compile Include="Client\Interface\Ledger\FoodProductionSettings.cs" />
+    <Compile Include="Client\Interface\Ledger\SheetSettings.cs" />
+    <Compile Include="Client\Interface\LogPanel.cs" />
+    <Compile Include="Client\Interface\MainPanel.cs" />
+    <Compile Include="Client\Interface\MapEditorSaveLoadPanel.cs" />
+    <Compile Include="Client\Interface\MapGUI\MapAreaRender.cs" />
+    <Compile Include="Client\Interface\MapGUI\Selection.cs" />
+    <Compile Include="Client\Interface\MapGUI\SelectRectangle.cs" />
+    <Compile Include="Client\Interface\MapGUI\ThreatRender.cs" />
+    <Compile Include="Client\Interface\MapGUI\TerrainBlockingRender.cs" />
+    <Compile Include="Client\Interface\MapGUI\ÏnfluenceRender.cs" />
+    <Compile Include="Client\Interface\MessageBox.cs" />
+    <Compile Include="Client\Interface\Minimap.cs" />
+    <Compile Include="Client\Interface\MinimapAccessPanel.cs" />
+    <Compile Include="Client\Interface\Missions\ActionPicker.cs" />
+    <Compile Include="Client\Interface\Missions\CreateMission.cs" />
+    <Compile Include="Client\Interface\Missions\MissionsPanel.cs" />
+    <Compile Include="Client\Interface\OptionsDialog.cs" />
+    <Compile Include="Client\Interface\OverlayGroundSpriteQuad.cs" />
+    <Compile Include="Client\Interface\OverlayPanel.cs" />
+    <Compile Include="Client\Interface\OverlayQuad.cs" />
+    <Compile Include="Client\Interface\Overlays\OverlaySettings.cs" />
+    <Compile Include="Client\Interface\Panel.cs" />
+    <Compile Include="Client\Interface\Personnel\PersonnelDialog.cs" />
+    <Compile Include="Client\Interface\Personnel\PersonnelList.cs" />
+    <Compile Include="Client\Interface\Personnel\PersonnelRosterPanel.cs" />
+    <Compile Include="Client\Interface\Policy\PolicyPanel.cs" />
+    <Compile Include="Client\Interface\Policy\TabPagePanel.cs" />
+    <Compile Include="Client\Interface\Policy\TiersPage.cs" />
+    <Compile Include="Client\Interface\Policy\WeaponsPage.cs" />
+    <Compile Include="Client\Interface\RatingsPanel.cs" />
+    <Compile Include="Client\Interface\RosterAccessPanel.cs" />
+    <Compile Include="Client\Interface\RosterPanel.cs" />
+    <Compile Include="Client\Interface\SaveLoadGamePanel.cs" />
+    <Compile Include="Client\Interface\SaveLoadMessageBox.cs" />
+    <Compile Include="Client\Interface\SidePanel.cs" />
+    <Compile Include="Client\Interface\SidePanelEditorTerrainHeight.cs" />
+    <Compile Include="Client\Interface\SidePanelEmpty.cs" />
+    <Compile Include="Client\Interface\SidePanelEntity.cs" />
+    <Compile Include="Client\Interface\SidePanelMapArea.cs" />
+    <Compile Include="Client\Interface\SidePanelEditorSoil.cs" />
+    <Compile Include="Client\Interface\SmallEditorPanel.cs" />
+    <Compile Include="Client\Interface\SortingSettings.cs" />
+    <Compile Include="Client\Interface\StatusScreen.cs" />
+    <Compile Include="Client\Interface\TabButtonPanel.cs" />
+    <Compile Include="Client\Interface\TalkPanel.cs" />
+    <Compile Include="Client\Interface\Tasks\JobsMessage.cs" />
+    <Compile Include="Client\Interface\Tasks\JobsPanel.cs" />
+    <Compile Include="Client\Interface\Tasks\TaskSettings.cs" />
+    <Compile Include="Client\Interface\World map\SiteWindow.cs" />
+    <Compile Include="Client\Interface\World map\WorldMap.cs" />
+    <Compile Include="Client\Interface\World map\WorldMapDialog.cs" />
+    <Compile Include="Client\Interface\World map\WorldMapRosterPanel.cs" />
+    <Compile Include="Client\KeyboardManager.cs" />
+    <Compile Include="Client\Log\Event.cs" />
+    <Compile Include="Client\Log\EventType.cs" />
+    <Compile Include="Client\Log\Log.cs" />
+    <Compile Include="Client\Log\TalkEvent.cs" />
+    <Compile Include="Client\MainMenu\BackgroundScreen.cs" />
+    <Compile Include="Client\MainMenu\Credits\CreditsInterface.cs" />
+    <Compile Include="Client\MainMenu\Credits\CreditsPanel.cs" />
+    <Compile Include="Client\MainMenu\Credits\CreditsScreen.cs" />
+    <Compile Include="Client\MainMenu\IntroVideo\IntroVideoScreen.cs" />
+    <Compile Include="Client\MainMenu\Intro\IntroInterface.cs" />
+    <Compile Include="Client\MainMenu\Intro\IntroPanel.cs" />
+    <Compile Include="Client\MainMenu\Intro\IntroScreen.cs" />
+    <Compile Include="Client\MainMenu\LoadMap\LoadMapInterface.cs" />
+    <Compile Include="Client\MainMenu\LoadMap\LoadMapScreen.cs" />
+    <Compile Include="Client\MainMenu\LoadReplay\LoadReplayInterface.cs" />
+    <Compile Include="Client\MainMenu\LoadReplay\LoadReplayPanel.cs" />
+    <Compile Include="Client\MainMenu\LoadReplay\LoadReplayScreen.cs" />
+    <Compile Include="Client\MainMenu\LoadSavedGame\LoadSavedGameInterface.cs" />
+    <Compile Include="Client\MainMenu\LoadSavedGame\LoadSavedGameScreen.cs" />
+    <Compile Include="Client\MainMenu\MainMenu\MainMenuDevPanel.cs" />
+    <Compile Include="Client\MainMenu\MainMenu\MainMenuInterface.cs" />
+    <Compile Include="Client\MainMenu\MainMenu\MainMenuPanel.cs" />
+    <Compile Include="Client\MainMenu\MainMenu\MainMenuScreen.cs" />
+    <Compile Include="Client\MainMenu\MainMenu\TimelinePanel.cs" />
+    <Compile Include="Client\MainMenu\Scenario\CustomizeScenarioInterface.cs" />
+    <Compile Include="Client\MainMenu\Scenario\CustomizeScenarioPanel.cs" />
+    <Compile Include="Client\MainMenu\Scenario\CustomizeScenarioScreen.cs" />
+    <Compile Include="Client\MainMenu\Scenario\SelectScenarioInterface.cs" />
+    <Compile Include="Client\MainMenu\Scenario\SelectScenarioPanel.cs" />
+    <Compile Include="Client\MainMenu\Scenario\SelectScenarioScreen.cs" />
+    <Compile Include="Client\MapClient.cs" />
+    <Compile Include="Client\MapRender\DayAndNightEffects.cs" />
+    <Compile Include="Client\MapRender\FogMap.cs" />
+    <Compile Include="Client\MapRender\GameWorldRenderer.cs" />
+    <Compile Include="Client\MapRender\Lighting.cs" />
+    <Compile Include="Client\MapRender\LightSource.cs" />
+    <Compile Include="Client\MapRender\MapResourceRenderer.cs" />
+    <Compile Include="Client\MapRender\TerrainSlice.cs" />
+    <Compile Include="Client\MapRender\TerrainSlicedMap.cs" />
+    <Compile Include="Client\MapRender\Water\Water.cs" />
+    <Compile Include="Client\ModelData.cs" />
+    <Compile Include="Client\Options.cs" />
+    <Compile Include="Client\Particles\DustPlume.cs" />
+    <Compile Include="Client\Particles\FireAndSmoke.cs" />
+    <Compile Include="Client\Particles\FirePlume.cs" />
+    <Compile Include="Client\Particles\FlamerPlume.cs" />
+    <Compile Include="Client\Particles\Particle.cs" />
+    <Compile Include="Client\Particles\ParticleEmitter.cs" />
+    <Compile Include="Client\Particles\ParticleEmitterEffect.cs" />
+    <Compile Include="Client\Particles\ParticleEmitterType.cs" />
+    <Compile Include="Client\Particles\ParticleManager.cs" />
+    <Compile Include="Client\Particles\ParticleSystem.cs" />
+    <Compile Include="Client\Particles\ParticleSystemType.cs" />
+    <Compile Include="Client\PropertyPresentation\CollapsablePresentationTypeCategoryData.cs" />
+    <Compile Include="Client\PropertyPresentation\CustomEntitySidePanel.cs" />
+    <Compile Include="Client\PropertyPresentation\GroupNode.cs" />
+    <Compile Include="Client\PropertyPresentation\LeafNode.cs" />
+    <Compile Include="Client\PropertyPresentation\Presentation.cs" />
+    <Compile Include="Client\PropertyPresentation\PresentationData.cs" />
+    <Compile Include="Client\PropertyPresentation\PresentationNode.cs" />
+    <Compile Include="Client\PropertyPresentation\PresentationType.cs" />
+    <Compile Include="Client\PropertyPresentation\PresentationTypeCategory.cs" />
+    <Compile Include="Client\PropertyPresentation\PresentationTypeCategoryProcessor.cs" />
+    <Compile Include="Client\PropertyPresentation\PropertyResult.cs" />
+    <Compile Include="Client\PropertyPresentation\StringSource.cs" />
+    <Compile Include="Client\PropertyPresentation\TextFormatting.cs" />
+    <Compile Include="Client\PropertyPresentation\TooltipSettings.cs" />
+    <Compile Include="Client\QuadBase.cs" />
+    <Compile Include="Client\QuadRenderer.cs" />
+    <Compile Include="Client\Renderables\AnimatedHead.cs" />
+    <Compile Include="Client\Renderables\AnimatedHeadType.cs" />
+    <Compile Include="Client\Renderables\AnimatedModel.cs" />
+    <Compile Include="Client\Renderables\AnimationStates.cs" />
+    <Compile Include="Client\Renderables\AnimConditionInfo.cs" />
+    <Compile Include="Client\Renderables\Effect.cs" />
+    <Compile Include="Client\Renderables\Envelope.cs" />
+    <Compile Include="Client\Renderables\PersistentRenderable.cs" />
+    <Compile Include="Client\Renderables\Renderable.cs" />
+    <Compile Include="Client\Renderables\RenderableFactory.cs" />
+    <Compile Include="Client\Renderables\RenderableStub.cs" />
+    <Compile Include="Client\Renderables\RenderableType.cs" />
+    <Compile Include="Client\Renderables\RenderAs.cs" />
+    <Compile Include="Client\Renderables\RenderAsBillboard.cs" />
+    <Compile Include="Client\Renderables\RenderAsBillboardType.cs" />
+    <Compile Include="Client\Renderables\RenderAsGroundSprite.cs" />
+    <Compile Include="Client\Renderables\RenderAsGroundSpriteType.cs" />
+    <Compile Include="Client\Renderables\RenderAsIcon.cs" />
+    <Compile Include="Client\Renderables\RenderAsIconType.cs" />
+    <Compile Include="Client\Renderables\RenderAsModel.cs" />
+    <Compile Include="Client\Renderables\RenderAsModelType.cs" />
+    <Compile Include="Client\Renderables\RenderKindOf.cs" />
+    <Compile Include="Client\Renderables\SkinnedAnimatedModel.cs" />
+    <Compile Include="Client\Renderables\StiffAnimatedModel.cs" />
+    <Compile Include="Client\Renderables\Updatable.cs" />
+    <Compile Include="Client\RoadAndPathQuad.cs" />
+    <Compile Include="Client\Screens\IngameLoadGameInterface.cs" />
+    <Compile Include="Client\Screens\IngameLoadGameScreen.cs" />
+    <Compile Include="Client\Screens\LoadingScreen.cs" />
+    <Compile Include="Client\Screens\LoadingScreenInterface.cs" />
+    <Compile Include="Client\Screens\Loading\HintPanel.cs" />
+    <Compile Include="Client\Screens\LoseGameInterface.cs" />
+    <Compile Include="Client\Screens\LoseGamePanel.cs" />
+    <Compile Include="Client\Screens\LoseGameScreen.cs" />
+    <Compile Include="Client\Screens\WinGameInterface.cs" />
+    <Compile Include="Client\Screens\WinGamePanel.cs" />
+    <Compile Include="Client\Screens\WinGameScreen.cs" />
+    <Compile Include="Client\Threshold.cs" />
+    <Compile Include="Common\BitMask64.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Common\Dimension.cs" />
+    <Compile Include="Common\Locale.cs" />
+    <Compile Include="Common\NormalDistribution.cs" />
+    <Compile Include="Common\Pair.cs" />
+    <Compile Include="Common\SimplexNoise.cs" />
+    <Compile Include="Common\Steam\StatsAndAchievements.cs" />
+    <Compile Include="Common\Steam\SteamManager.cs" />
+    <Compile Include="Common\The.cs" />
+    <Compile Include="Common\Units.cs" />
+    <Compile Include="Controller\BinaryFileReader.cs" />
+    <Compile Include="Controller\Commands\Command.cs" />
+    <Compile Include="Controller\Commands\CommandInvoker.cs" />
+    <Compile Include="Controller\Input\InputManager.cs" />
+    <Compile Include="Controller\PositionableStreamWriter.cs" />
+    <Compile Include="Controller\Replays\RandomGenerator.cs" />
+    <Compile Include="Controller\Replays\Recorder.cs" />
+    <Compile Include="Controller\Replays\Replay.cs" />
+    <Compile Include="Controller\Replays\Replayer.cs" />
+    <Compile Include="Controller\Replays\ReplayFrame.cs" />
+    <Compile Include="Controller\Replays\ReplayKeyboardState.cs" />
+    <Compile Include="Controller\Replays\ReplayVerificationData.cs" />
+    <Compile Include="Controller\ScreenManager\Controller.cs" />
+    <Compile Include="Controller\ScreenManager\GameScreen.cs" />
+    <Compile Include="Controller\ScreenManager\InputState.cs" />
+    <Compile Include="DevelopmentTools\Command.cs" />
+    <Compile Include="DevelopmentTools\DevText.cs" />
+    <Compile Include="DevelopmentTools\Manager.cs" />
+    <Compile Include="DevelopmentTools\Options.cs" />
+    <Compile Include="DevelopmentTools\Shape.cs" />
+    <Compile Include="GameDataCollection.cs" />
+    <Compile Include="IGameDataCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sim\AI\Activities\Activity.cs" />
+    <Compile Include="Sim\AI\Activities\Formation.cs" />
+    <Compile Include="Sim\AI\Activities\GroupMoveActivity.cs" />
+    <Compile Include="Sim\AI\Activities\LeisureWalkActivity.cs" />
+    <Compile Include="Sim\AI\Activities\LooseGroupFormation.cs" />
+    <Compile Include="Sim\AI\Activities\VFormation.cs" />
+    <Compile Include="Sim\AI\Constants\AIConstants.cs" />
+    <Compile Include="Sim\AI\Constants\Combat.cs" />
+    <Compile Include="Sim\AI\Constants\EvaluatorWeights.cs" />
+    <Compile Include="Sim\AI\Constants\Migration.cs" />
+    <Compile Include="Sim\AI\Constants\Rating\Comfort.cs" />
+    <Compile Include="Sim\AI\Constants\Rating\Food.cs" />
+    <Compile Include="Sim\AI\Constants\Rating\Ratings.cs" />
+    <Compile Include="Sim\AI\Constants\Rating\Security.cs" />
+    <Compile Include="Sim\AI\EntityLock.cs" />
+    <Compile Include="Sim\AI\Goals\CompositeGoal.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateAttackJobs.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateBuildHomeAddon.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateChangeThreatStance.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateEat.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateEmigrate.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateFindHome.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateFindPlaceToEat.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateHaulingJobs.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateJob.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateLeisureWalk.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateReturnHome.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateScoutingJob.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateSleep.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateTakeFive.cs" />
+    <Compile Include="Sim\AI\Goals\EvaluateWander.cs" />
+    <Compile Include="Sim\AI\Goals\Goal.cs" />
+    <Compile Include="Sim\AI\Goals\GoalArriveAsVisitor.cs" />
+    <Compile Include="Sim\AI\Goals\GoalAttack.cs" />
+    <Compile Include="Sim\AI\Goals\GoalBeingHit.cs" />
+    <Compile Include="Sim\AI\Goals\GoalChangeStance.cs" />
+    <Compile Include="Sim\AI\Goals\GoalCollapse.cs" />
+    <Compile Include="Sim\AI\Goals\GoalConstruct.cs" />
+    <Compile Include="Sim\AI\Goals\GoalCook.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoAttack.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoEmigrate.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoMoveInToNewHome.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoProduce.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoProduceAtomic.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoSleep.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoTakeFive.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDoTakeFiveAtomic.cs" />
+    <Compile Include="Sim\AI\Goals\GoalDropItem.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEat.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEmigrate.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEnter.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEnterVehicleAsDriver.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEnterVehicleAsPassenger.cs" />
+    <Compile Include="Sim\AI\Goals\GoalEvaluator.cs" />
+    <Compile Include="Sim\AI\Goals\GoalExit.cs" />
+    <Compile Include="Sim\AI\Goals\GoalExitVehicle.cs" />
+    <Compile Include="Sim\AI\Goals\GoalFindPrey.cs" />
+    <Compile Include="Sim\AI\Goals\GoalFlyToPosition.cs" />
+    <Compile Include="Sim\AI\Goals\GoalFollowPath.cs" />
+    <Compile Include="Sim\AI\Goals\GoalHarvest.cs" />
+    <Compile Include="Sim\AI\Goals\GoalHaul.cs" />
+    <Compile Include="Sim\AI\Goals\GoalHunt.cs" />
+    <Compile Include="Sim\AI\Goals\GoalIsDying.cs" />
+    <Compile Include="Sim\AI\Goals\GoalLand.cs" />
+    <Compile Include="Sim\AI\Goals\GoalLeisureWalk.cs" />
+    <Compile Include="Sim\AI\Goals\GoalLoad.cs" />
+    <Compile Include="Sim\AI\Goals\GoalMoveAsGroup.cs" />
+    <Compile Include="Sim\AI\Goals\GoalMoveInToNewHome.cs" />
+    <Compile Include="Sim\AI\Goals\GoalMoveToPosition.cs" />
+    <Compile Include="Sim\AI\Goals\GoalPatrol.cs" />
+    <Compile Include="Sim\AI\Goals\GoalPickup.cs" />
+    <Compile Include="Sim\AI\Goals\GoalProduce.cs" />
+    <Compile Include="Sim\AI\Goals\GoalReplenish.cs" />
+    <Compile Include="Sim\AI\Goals\GoalReturnHome.cs" />
+    <Compile Include="Sim\AI\Goals\GoalChecking.cs" />
+    <Compile Include="Sim\AI\Goals\GoalScouting.cs" />
+    <Compile Include="Sim\AI\Goals\GoalSearchArea.cs" />
+    <Compile Include="Sim\AI\Goals\GoalSleep.cs" />
+    <Compile Include="Sim\AI\Goals\GoalTakeFive.cs" />
+    <Compile Include="Sim\AI\Goals\GoalTakeoff.cs" />
+    <Compile Include="Sim\AI\Goals\GoalThink.cs" />
+    <Compile Include="Sim\AI\Goals\GoalTraverseEdgeBetweenWaypoints.cs" />
+    <Compile Include="Sim\AI\Goals\GoalTraverseEdgeBetweenWaypointsAtomic.cs" />
+    <Compile Include="Sim\AI\Goals\GoalTurnToFace.cs" />
+    <Compile Include="Sim\AI\Goals\GoalUnload.cs" />
+    <Compile Include="Sim\AI\Goals\GoalWait.cs" />
+    <Compile Include="Sim\AI\Goals\GoalWaitAsPassenger.cs" />
+    <Compile Include="Sim\AI\Goals\GoalWaitForPassenger.cs" />
+    <Compile Include="Sim\AI\Goals\GoalWaitForRide.cs" />
+    <Compile Include="Sim\AI\Goals\GoalWander.cs" />
+    <Compile Include="Sim\AI\Goals\IScoreJob.cs" />
+    <Compile Include="Sim\AI\Goals\ITopLevelGoal.cs" />
+    <Compile Include="Sim\AI\Goals\LookUpGoals.cs" />
+    <Compile Include="Sim\AI\Goals\ReplenishItems.cs" />
+    <Compile Include="Sim\AI\IKnownEntityData.cs" />
+    <Compile Include="Sim\AI\Memory.cs" />
+    <Compile Include="Sim\AI\MemoryFact.cs" />
+    <Compile Include="Sim\AI\MemoryItemRenderData.cs" />
+    <Compile Include="Sim\AI\MemoryModelRenderData.cs" />
+    <Compile Include="Sim\AI\Needs\ComfortEffects.cs" />
+    <Compile Include="Sim\AI\Needs\FoodNeed.cs" />
+    <Compile Include="Sim\AI\Needs\FoodNeedType.cs" />
+    <Compile Include="Sim\AI\Needs\Need.cs" />
+    <Compile Include="Sim\AI\Needs\Needs.cs" />
+    <Compile Include="Sim\AI\Needs\NeedType.cs" />
+    <Compile Include="Sim\AI\Needs\PhysicalEffects.cs" />
+    <Compile Include="Sim\AI\Needs\PhysicalNeed.cs" />
+    <Compile Include="Sim\AI\Needs\ProcessNeedType.cs" />
+    <Compile Include="Sim\AI\Needs\SleepNeedType.cs" />
+    <Compile Include="Sim\AI\Pathfinding\AStar\AStarSearch.cs" />
+    <Compile Include="Sim\AI\Pathfinding\AStar\AuthorAttribute.cs" />
+    <Compile Include="Sim\AI\Pathfinding\AStar\HighResolutionTime.cs" />
+    <Compile Include="Sim\AI\Pathfinding\AStar\PriorityQueueB.cs" />
+    <Compile Include="Sim\AI\Pathfinding\FloodFill.cs" />
+    <Compile Include="Sim\AI\Pathfinding\PathFinderNode.cs" />
+    <Compile Include="Sim\AI\Pathfinding\PathPlanner.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionPath.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionPathFinderNodeAStar.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionPathFinderNodeBFS.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionPathNode.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionSearcher.cs" />
+    <Compile Include="Sim\AI\Pathfinding\RegionSearchPlanner.cs" />
+    <Compile Include="Sim\AI\Planners\GoapAction.cs" />
+    <Compile Include="Sim\AI\Planners\GoapFindPreyAction.cs" />
+    <Compile Include="Sim\AI\Planners\GoapScoutAction.cs" />
+    <Compile Include="Sim\AI\Planners\Motivation.cs" />
+    <Compile Include="Sim\AI\Planners\PhysicalNeedsMotivation.cs" />
+    <Compile Include="Sim\AI\Planners\PhysicalNeedsPlanner.cs" />
+    <Compile Include="Sim\AI\Planners\Planner.cs" />
+    <Compile Include="Sim\AI\Planners\RegionKnowledge.cs" />
+    <Compile Include="Sim\AI\PlaySiteKnowledge.cs" />
+    <Compile Include="Sim\AI\ResourceMap.cs" />
+    <Compile Include="Sim\AI\ResourceMapForAgent.cs" />
+    <Compile Include="Sim\AI\SharedKnowledge.cs" />
+    <Compile Include="Sim\AI\StrategicDecisions\AllegianceRatings.cs" />
+    <Compile Include="Sim\AI\StrategicDecisions\EmigrateDecider.cs" />
+    <Compile Include="Sim\AI\StrategicDecisions\StrategyDecider.cs" />
+    <Compile Include="Sim\Allegiance\Allegiance.cs" />
+    <Compile Include="Sim\Allegiance\AllegianceData.cs" />
+    <Compile Include="Sim\Allegiance\AllegianceEventType.cs" />
+    <Compile Include="Sim\Allegiance\AllegianceRelation.cs" />
+    <Compile Include="Sim\Allegiance\AllegianceRelationData.cs" />
+    <Compile Include="Sim\Allegiance\Contract.cs" />
+    <Compile Include="Sim\Allegiance\ContractData.cs" />
+    <Compile Include="Sim\Allegiance\FoodExtraction.cs" />
+    <Compile Include="Sim\Allegiance\HasMembers.cs" />
+    <Compile Include="Sim\Allegiance\HumanActivities.cs" />
+    <Compile Include="Sim\Allegiance\IHasMembers.cs" />
+    <Compile Include="Sim\Allegiance\LookUpIHasMembers.cs" />
+    <Compile Include="Sim\Allegiance\StatsData.cs" />
+    <Compile Include="Sim\Allegiance\Stats\ComfortStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\ComfortStatisticsForAllegiance.cs" />
+    <Compile Include="Sim\Allegiance\Stats\ComfortStatisticsForMembers.cs" />
+    <Compile Include="Sim\Allegiance\Stats\FoodStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\FoodStatisticsForAllegiance.cs" />
+    <Compile Include="Sim\Allegiance\Stats\FoodStatisticsForMembers.cs" />
+    <Compile Include="Sim\Allegiance\Stats\GroupStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\IHasRating.cs" />
+    <Compile Include="Sim\Allegiance\Stats\KillStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\NutrientStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\ProductionStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\PopulationStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\Rating.cs" />
+    <Compile Include="Sim\Allegiance\Stats\SecurityStatistics.cs" />
+    <Compile Include="Sim\Allegiance\Stats\SecurityStatisticsForAllegiance.cs" />
+    <Compile Include="Sim\Allegiance\Stats\SecurityStatisticsForMembers.cs" />
+    <Compile Include="Sim\Allegiance\Stats\Statistic.cs" />
+    <Compile Include="Sim\Allegiance\Stats\ViolentEvent.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\AllegianceDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\AllegianceTemplateLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\BaseDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\Constants\PhysicalWork.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\Constants\SleepNeed.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\CultureTemplateLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EffectProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EffectTypeLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EntityPolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EventActionsLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EventHooks\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\EventHooks\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ExpeditionDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ItemLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\OfferDemandProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\OrdersLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ParticlesLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\PersonalityLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\PricesProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\RepairProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ResourceLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\SiteDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\SiteTemplateLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\StructuresProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\SubstanceLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\TerrainFeatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\ToolsLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\TradeGroupLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\TradeProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\TraitTemplateLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\TreeLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\UpgradeCategoryLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\UpgradeProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\BaseData\VehiclesProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\AllScenarioLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\RGScenarioLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\PersonalityLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\Scenario1xDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Data\TerrainFeatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 1\Scenario1Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\Scenario2DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 2\Scenario2Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\EntityPolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\Scenario3DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\TerrainFeatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Data\TutorialLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 3\Scenario3Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\Scenario4xDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4x\Scenario4xLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\Scenario4yDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4y\Scenario4yLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\Scenario4DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 4\Scenario4Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\Scenario5DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Data\TutorialLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 5\Scenario5Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EffectProfileLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EffectTypeLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\Scenario6DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Data\TutorialLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 6\Scenario6Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\ActionSetsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\CreatureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\DetectionEventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\EntityDataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\EntityTypeDescriptionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\EventActionLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\EventHooksLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\ItemsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\PolledEventsLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\ProcessLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\Scenario7DataLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\StructureLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Data\TutorialLoader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\Scenario 7\Scenario7Loader.cs" />
+    <Compile Include="Sim\AllGameData\Scenarios\ScenarioLoader.cs" />
+    <Compile Include="Sim\AllGameData\UserDataLoader.cs" />
+    <Compile Include="Sim\Buildings\ActivityArea.cs" />
+    <Compile Include="Sim\Buildings\AddonLink.cs" />
+    <Compile Include="Sim\Buildings\EdgeLayout.cs" />
+    <Compile Include="Sim\Buildings\EdgeLayoutType.cs" />
+    <Compile Include="Sim\Buildings\Heating.cs" />
+    <Compile Include="Sim\Buildings\HeatingType.cs" />
+    <Compile Include="Sim\Buildings\IAddon.cs" />
+    <Compile Include="Sim\Buildings\IAddonType.cs" />
+    <Compile Include="Sim\Buildings\IEnergyProducer.cs" />
+    <Compile Include="Sim\Buildings\RenderAsConnectedGroundSprite.cs" />
+    <Compile Include="Sim\Buildings\RenderAsConnectedGroundSpriteType.cs" />
+    <Compile Include="Sim\Buildings\Residence.cs" />
+    <Compile Include="Sim\Buildings\Structure.cs" />
+    <Compile Include="Sim\Buildings\StructureCategory.cs" />
+    <Compile Include="Sim\Buildings\StructureList.cs" />
+    <Compile Include="Sim\Buildings\StructureType.cs" />
+    <Compile Include="Sim\Buildings\TerminalType.cs" />
+    <Compile Include="Sim\Collections.cs" />
+    <Compile Include="Sim\Collisions\Collidable.cs" />
+    <Compile Include="Sim\Collisions\CollidableType.cs" />
+    <Compile Include="Sim\Collisions\CollideShapes.cs" />
+    <Compile Include="Sim\Collisions\CollisionManager.cs" />
+    <Compile Include="Sim\Collisions\GeometryLayout.cs" />
+    <Compile Include="Sim\Collisions\GeometryLayoutType.cs" />
+    <Compile Include="Sim\Collisions\ICollide.cs" />
+    <Compile Include="Sim\Collisions\QNode.cs" />
+    <Compile Include="Sim\Combat\AreaAttack.cs" />
+    <Compile Include="Sim\Combat\AttackType.cs" />
+    <Compile Include="Sim\Combat\ConeAttack.cs" />
+    <Compile Include="Sim\Combat\DamageType.cs" />
+    <Compile Include="Sim\Combat\SplashAttack.cs" />
+    <Compile Include="Sim\Commands\AllowAmmoForVermin.cs" />
+    <Compile Include="Sim\Commands\AdoptTierPolicy.cs" />
+    <Compile Include="Sim\Commands\PatrolAreaUpdateJob.cs" />
+    <Compile Include="Sim\Commands\AttackAreaUpdateJob.cs" />
+    <Compile Include="Sim\Commands\Build.cs" />
+    <Compile Include="Sim\Commands\CancelJob.cs" />
+    <Compile Include="Sim\Commands\Claim.cs" />
+    <Compile Include="Sim\Commands\CreateMission.cs" />
+    <Compile Include="Sim\Commands\CreateMissionTemplate.cs" />
+    <Compile Include="Sim\Commands\CreateStockpile.cs" />
+    <Compile Include="Sim\Commands\DeleteZone.cs" />
+    <Compile Include="Sim\Commands\Discard.cs" />
+    <Compile Include="Sim\Commands\Forage.cs" />
+    <Compile Include="Sim\Commands\Gather.cs" />
+    <Compile Include="Sim\Commands\Hunt.cs" />
+    <Compile Include="Sim\Commands\HuntArea.cs" />
+    <Compile Include="Sim\Commands\AttackArea.cs" />
+    <Compile Include="Sim\Commands\PatrolArea.cs" />
+    <Compile Include="Sim\Commands\Pause.cs" />
+    <Compile Include="Sim\Commands\PlaceExpedition.cs" />
+    <Compile Include="Sim\Commands\Resume.cs" />
+    <Compile Include="Sim\Commands\Salvage.cs" />
+    <Compile Include="Sim\Commands\Scout.cs" />
+    <Compile Include="Sim\Commands\SetGameSpeed.cs" />
+    <Compile Include="Sim\Commands\SetHaulPriority.cs" />
+    <Compile Include="Sim\Commands\SetProduction.cs" />
+    <Compile Include="Sim\Commands\SetStandingOrder.cs" />
+    <Compile Include="Sim\Commands\SetStandingOrderGatherInZone.cs" />
+    <Compile Include="Sim\Commands\SetStandingOrderHuntInZone.cs" />
+    <Compile Include="Sim\Commands\SetTaskPriority.cs" />
+    <Compile Include="Sim\Commands\SetUpgrade.cs" />
+    <Compile Include="Sim\Commands\SpecialAction.cs" />
+    <Compile Include="Sim\Commands\ZoneCommand.cs" />
+    <Compile Include="Sim\Communication\Communicator.cs" />
+    <Compile Include="Sim\Communication\CommunicatorType.cs" />
+    <Compile Include="Sim\Communication\ICommunicates.cs" />
+    <Compile Include="Sim\Constants.cs" />
+    <Compile Include="Sim\CustomXmlSerializer.cs" />
+    <Compile Include="Sim\DateAndTime.cs" />
+    <Compile Include="Sim\DebugLog.cs" />
+    <Compile Include="Sim\Effects\EffectProfileType.cs" />
+    <Compile Include="Sim\Effects\EffectType.cs" />
+    <Compile Include="Sim\Effects\FlagEffectType.cs" />
+    <Compile Include="Sim\Effects\NumberEffectType.cs" />
+    <Compile Include="Sim\Effects\SimEffect.cs" />
+    <Compile Include="Sim\Effects\SimEffectProfile.cs" />
+    <Compile Include="Sim\EnergySystem.cs" />
+    <Compile Include="Sim\Entities\AgentAction.cs" />
+    <Compile Include="Sim\Entities\AttributeType.cs" />
+    <Compile Include="Sim\Entities\Biological\AgeGroup.cs" />
+    <Compile Include="Sim\Entities\Biological\AgeGroupType.cs" />
+    <Compile Include="Sim\Entities\Biological\BiologicalEntity.cs" />
+    <Compile Include="Sim\Entities\Biological\BiologicalType.cs" />
+    <Compile Include="Sim\Entities\Biological\BioProperty.cs" />
+    <Compile Include="Sim\Entities\Biological\BioPropertyType.cs" />
+    <Compile Include="Sim\Entities\Biological\CasteType.cs" />
+    <Compile Include="Sim\Entities\Biological\OrderType.cs" />
+    <Compile Include="Sim\Entities\Biological\RaceType.cs" />
+    <Compile Include="Sim\Entities\Body\BiologicalBodyPart.cs" />
+    <Compile Include="Sim\Entities\Body\BiologicalBodyPartType.cs" />
+    <Compile Include="Sim\Entities\Body\Body.cs" />
+    <Compile Include="Sim\Entities\Body\BodyComponent.cs" />
+    <Compile Include="Sim\Entities\Body\BodyLayerType.cs" />
+    <Compile Include="Sim\Entities\Body\BodyPart.cs" />
+    <Compile Include="Sim\Entities\Body\BodyPartFunction.cs" />
+    <Compile Include="Sim\Entities\Body\BodyPartType.cs" />
+    <Compile Include="Sim\Entities\Body\BodyType.cs" />
+    <Compile Include="Sim\Entities\Body\IHasBodyParts.cs" />
+    <Compile Include="Sim\Entities\Body\MachineBodyPart.cs" />
+    <Compile Include="Sim\Entities\Body\MachineBodyPartFunction.cs" />
+    <Compile Include="Sim\Entities\Body\MachineBodyPartType.cs" />
+    <Compile Include="Sim\Entities\Body\Organ.cs" />
+    <Compile Include="Sim\Entities\Body\OrganType.cs" />
+    <Compile Include="Sim\Entities\Carcass.cs" />
+    <Compile Include="Sim\Entities\Component.cs" />
+    <Compile Include="Sim\Entities\ComponentAttribute.cs" />
+    <Compile Include="Sim\Entities\ContainedBillboard.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\AgentStorage.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\AgentStorageType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\Container.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\ContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\HomeContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\HomeContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\IHasItemStorageType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\MagazineContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\MagazineContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\ReplenishContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\ReplenishContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\StorageContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\StorageContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\TerminalContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\TerminalContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\OtherContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\ToolContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\OtherContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\ToolContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\UpgradableBuildingContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\UpgradableBuildingContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\UpgradableContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\UpgradableContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\VehicleContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\VehicleContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\WorkshopContainer.cs" />
+    <Compile Include="Sim\Entities\Containers\Components\WorkshopContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\DefaultStorageSettings.cs" />
+    <Compile Include="Sim\Entities\Containers\ExitAndEntrance.cs" />
+    <Compile Include="Sim\Entities\Containers\Garrison.cs" />
+    <Compile Include="Sim\Entities\Containers\ICrew.cs" />
+    <Compile Include="Sim\Entities\Containers\IExit.cs" />
+    <Compile Include="Sim\Entities\Containers\IGarrison.cs" />
+    <Compile Include="Sim\Entities\Containers\IHasReplenishItems.cs" />
+    <Compile Include="Sim\Entities\Containers\IHoldsProductionOutput.cs" />
+    <Compile Include="Sim\Entities\Containers\IReplenishes.cs" />
+    <Compile Include="Sim\Entities\Containers\IResidence.cs" />
+    <Compile Include="Sim\Entities\Containers\IStorage.cs" />
+    <Compile Include="Sim\Entities\Containers\ItemStorage.cs" />
+    <Compile Include="Sim\Entities\Containers\ItemStorageType.cs" />
+    <Compile Include="Sim\Entities\Containers\ITerminal.cs" />
+    <Compile Include="Sim\Entities\Containers\ITransport.cs" />
+    <Compile Include="Sim\Entities\Containers\IUpgrades.cs" />
+    <Compile Include="Sim\Entities\Containers\ProductionContainerType.cs" />
+    <Compile Include="Sim\Entities\Containers\ReplenishItems.cs" />
+    <Compile Include="Sim\Entities\Containers\Storage.cs" />
+    <Compile Include="Sim\Entities\Containers\StorageCondition.cs" />
+    <Compile Include="Sim\Entities\Containers\StorageTarget.cs" />
+    <Compile Include="Sim\Entities\Containers\UpgradeCategory.cs" />
+    <Compile Include="Sim\Entities\Containers\UpgradeItems.cs" />
+    <Compile Include="Sim\Entities\Containers\UpgradeProfile.cs" />
+    <Compile Include="Sim\Entities\DefaultCrops.cs" />
+    <Compile Include="Sim\Entities\DefendActionType.cs" />
+    <Compile Include="Sim\Entities\Detectable.cs" />
+    <Compile Include="Sim\Entities\DetectionType.cs" />
+    <Compile Include="Sim\Entities\EditorData.cs" />
+    <Compile Include="Sim\Entities\Entity.cs" />
+    <Compile Include="Sim\Entities\EntityAndRoot.cs" />
+    <Compile Include="Sim\Entities\EntityCategory.cs" />
+    <Compile Include="Sim\Entities\EntityFactory.cs" />
+    <Compile Include="Sim\Entities\EntityGroup.cs" />
+    <Compile Include="Sim\Entities\EntityGroupPolicy.cs" />
+    <Compile Include="Sim\Entities\EntityType.cs" />
+    <Compile Include="Sim\Entities\EntityTypeDescription.cs" />
+    <Compile Include="Sim\Entities\EntityTypePolledEvent.cs" />
+    <Compile Include="Sim\Entities\EventHook.cs" />
+    <Compile Include="Sim\Entities\Household.cs" />
+    <Compile Include="Sim\Entities\IAnimatedModel.cs" />
+    <Compile Include="Sim\Entities\ICategoryType.cs" />
+    <Compile Include="Sim\Entities\IDiscoverable.cs" />
+    <Compile Include="Sim\Entities\IDrawnAsGroundSprite.cs" />
+    <Compile Include="Sim\Entities\IHasCategory.cs" />
+    <Compile Include="Sim\Entities\IHasExposedProperties.cs" />
+    <Compile Include="Sim\Entities\IHasIcon.cs" />
+    <Compile Include="Sim\Entities\Intelligence.cs" />
+    <Compile Include="Sim\Entities\IntelligenceType.cs" />
+    <Compile Include="Sim\Entities\IOwner.cs" />
+    <Compile Include="Sim\Entities\LightingType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\AgentCollisionResponder.cs" />
+    <Compile Include="Sim\Entities\Locomotors\AgentCollisionResponderType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\BallisticCollisionResponder.cs" />
+    <Compile Include="Sim\Entities\Locomotors\BallisticLocomotor.cs" />
+    <Compile Include="Sim\Entities\Locomotors\BallisticLocomotorType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\BallisticResponderType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\CollisionResponder.cs" />
+    <Compile Include="Sim\Entities\Locomotors\CollisionResponderType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\ICollisionResponder.cs" />
+    <Compile Include="Sim\Entities\Locomotors\LeggedLocomotor.cs" />
+    <Compile Include="Sim\Entities\Locomotors\LeggedLocomotorType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\Locomotor.cs" />
+    <Compile Include="Sim\Entities\Locomotors\LocomotorType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\Rotator.cs" />
+    <Compile Include="Sim\Entities\Locomotors\RotatorType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\Stances\Stance.cs" />
+    <Compile Include="Sim\Entities\Locomotors\Stances\StancesType.cs" />
+    <Compile Include="Sim\Entities\Locomotors\Stances\StanceType.cs" />
+    <Compile Include="Sim\Entities\LookUpEntityGroups.cs" />
+    <Compile Include="Sim\Entities\LookUpHasEntityGroup.cs" />
+    <Compile Include="Sim\Entities\LookUpIDetectables.cs" />
+    <Compile Include="Sim\Entities\MachineEntity.cs" />
+    <Compile Include="Sim\Entities\MachineEntityType.cs" />
+    <Compile Include="Sim\Entities\MagazineType.cs" />
+    <Compile Include="Sim\Entities\NonLivingEntity.cs" />
+    <Compile Include="Sim\Entities\NonLivingType.cs" />
+    <Compile Include="Sim\Entities\Owners\HasEntityGroup.cs" />
+    <Compile Include="Sim\Entities\Owners\LookUpOwners.cs" />
+    <Compile Include="Sim\Entities\Owners\Owner.cs" />
+    <Compile Include="Sim\Entities\PalatableFood.cs" />
+    <Compile Include="Sim\Entities\PathType.cs" />
+    <Compile Include="Sim\Entities\Person.cs" />
+    <Compile Include="Sim\Entities\Personality.cs" />
+    <Compile Include="Sim\Entities\PersonalityType.cs" />
+    <Compile Include="Sim\Entities\PersonType.cs" />
+    <Compile Include="Sim\Entities\PointLayout.cs" />
+    <Compile Include="Sim\Entities\PointLayoutType.cs" />
+    <Compile Include="Sim\Entities\Power.cs" />
+    <Compile Include="Sim\Entities\PowerType.cs" />
+    <Compile Include="Sim\Entities\RepairTypes\EntityRepairProfile.cs" />
+    <Compile Include="Sim\Entities\RepairTypes\RepairPackage.cs" />
+    <Compile Include="Sim\Entities\RepairTypes\RepairPackageAction.cs" />
+    <Compile Include="Sim\Entities\RepairTypes\RepairProfile.cs" />
+    <Compile Include="Sim\Entities\RepairTypes\RepairType.cs" />
+    <Compile Include="Sim\Entities\ReplenishActionType.cs" />
+    <Compile Include="Sim\Entities\RequiresEnergy.cs" />
+    <Compile Include="Sim\Entities\RequiresEnergyType.cs" />
+    <Compile Include="Sim\Entities\RequiresFuel.cs" />
+    <Compile Include="Sim\Entities\RequiresFuelType.cs" />
+    <Compile Include="Sim\Entities\RequiresPower.cs" />
+    <Compile Include="Sim\Entities\RequiresPowerType.cs" />
+    <Compile Include="Sim\Entities\ResidenceType.cs" />
+    <Compile Include="Sim\Entities\ResourceNode.cs" />
+    <Compile Include="Sim\Entities\Rock.cs" />
+    <Compile Include="Sim\Entities\RockType.cs" />
+    <Compile Include="Sim\Entities\ScareActionType.cs" />
+    <Compile Include="Sim\Entities\Sensor.cs" />
+    <Compile Include="Sim\Entities\SensorType.cs" />
+    <Compile Include="Sim\Entities\SimEffectsComponent.cs" />
+    <Compile Include="Sim\Entities\Skills\ProfessionType.cs" />
+    <Compile Include="Sim\Entities\Skills\Skill.cs" />
+    <Compile Include="Sim\Entities\Skills\SkillCategory.cs" />
+    <Compile Include="Sim\Entities\Skills\SkillType.cs" />
+    <Compile Include="Sim\Entities\StaticConditionInfo.cs" />
+    <Compile Include="Sim\Entities\SteerableFrontWheels.cs" />
+    <Compile Include="Sim\Entities\Substances\SubstanceAmount.cs" />
+    <Compile Include="Sim\Entities\Substances\SubstancePool.cs" />
+    <Compile Include="Sim\Entities\Substances\Substances.cs" />
+    <Compile Include="Sim\Entities\Substances\SubstanceType.cs" />
+    <Compile Include="Sim\Entities\Substances\SubstanceTypes.cs" />
+    <Compile Include="Sim\Entities\Templates\CultureTemplate.cs" />
+    <Compile Include="Sim\Entities\Templates\TraitTemplate.cs" />
+    <Compile Include="Sim\Entities\TerrainFeatureType.cs" />
+    <Compile Include="Sim\Entities\TerrainPath.cs" />
+    <Compile Include="Sim\Entities\Threat.cs" />
+    <Compile Include="Sim\Entities\ThreatGroup.cs" />
+    <Compile Include="Sim\Entities\ThreatType.cs" />
+    <Compile Include="Sim\Entities\ToolOrWeaponSlot.cs" />
+    <Compile Include="Sim\Entities\ToolOrWeaponSlotType.cs" />
+    <Compile Include="Sim\Entities\ToolType.cs" />
+    <Compile Include="Sim\Entities\Upgrader.cs" />
+    <Compile Include="Sim\Entities\Wound.cs" />
+    <Compile Include="Sim\EnumComparer.cs" />
+    <Compile Include="Sim\Expeditions\Expedition.cs" />
+    <Compile Include="Sim\Expeditions\ExpeditionData.cs" />
+    <Compile Include="Sim\Expeditions\HumanExpeditionActivities.cs" />
+    <Compile Include="Sim\Expeditions\Population.cs" />
+    <Compile Include="Sim\Expeditions\PopulationData.cs" />
+    <Compile Include="Sim\Expeditions\SkillList.cs" />
+    <Compile Include="Sim\Expeditions\Stocks.cs" />
+    <Compile Include="Sim\Expressions\Evaluator.cs" />
+    <Compile Include="Sim\GameData.cs" />
+    <Compile Include="Sim\GameObject.cs" />
+    <Compile Include="Sim\GatheringSites\Arc.cs" />
+    <Compile Include="Sim\GatheringSites\GatheringSite.cs" />
+    <Compile Include="Sim\GatheringSites\GatheringSiteType.cs" />
+    <Compile Include="Sim\GatheringSites\VisitorSpot.cs" />
+    <Compile Include="Sim\IDataType.cs" />
+    <Compile Include="Sim\IDEvent.cs" />
+    <Compile Include="Sim\IGameData.cs" />
+    <Compile Include="Sim\IGameDataObject.cs" />
+    <Compile Include="Sim\IGameEntity.cs" />
+    <Compile Include="Sim\IHasAllegiance.cs" />
+    <Compile Include="Sim\ILocatable.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ActionSetData.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ActionSets.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ActionSetType.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\AttackEntityAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\CancelJobAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ChangeCreditsAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ChangeResourcesAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ClaimEntityAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\Conversation.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\CreateExpeditionAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\CreateJobAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\DestroyEntityAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\DetectAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\DialogOption.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\DynamicLocation.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\DynamicText.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\EventAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\EventActionType.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ExploreAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\LoseGameAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\ProcessAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SetPropertyAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnAllegianceAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnAllegianceRelationAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnContractAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnEntityAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnRouteAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnSiteAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnStockpileAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnTriggerAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnUpgradeAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SpawnWorldAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\SubstituteValue.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\TalkAction.cs" />
+    <Compile Include="Sim\InGameEvents\Actions\WinGameAction.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\AgentCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\AreaCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\Condition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\ConditionFunction.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\ConditionValue.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\CustomCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\DummyCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\FilterCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\ListCondition.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\PlayerAllegiancePersons.cs" />
+    <Compile Include="Sim\InGameEvents\Conditions\PropertyCondition.cs" />
+    <Compile Include="Sim\InGameEvents\EventManager.cs" />
+    <Compile Include="Sim\InGameEvents\Expressions\EvalNode.cs" />
+    <Compile Include="Sim\InGameEvents\Expressions\FunctionNode.cs" />
+    <Compile Include="Sim\InGameEvents\Expressions\UnaryFunctionNode.cs" />
+    <Compile Include="Sim\InGameEvents\Expressions\ValueNode.cs" />
+    <Compile Include="Sim\InGameEvents\PlayerEntityDeath.cs" />
+    <Compile Include="Sim\InGameEvents\PolledEvent.cs" />
+    <Compile Include="Sim\InGameEvents\PolledEventType.cs" />
+    <Compile Include="Sim\InGameEvents\PropertyObjects\GetList.cs" />
+    <Compile Include="Sim\InGameEvents\PropertyObjects\GetObject.cs" />
+    <Compile Include="Sim\InGameEvents\PropertyObjects\TargetObject.cs" />
+    <Compile Include="Sim\InGameEvents\SpecialEvents\Funeral.cs" />
+    <Compile Include="Sim\InGameEvents\SpecialEvents\PolicyAdoptedByVoting.cs" />
+    <Compile Include="Sim\InGameEvents\SpecialEvents\UnhappinessGroupMeeting.cs" />
+    <Compile Include="Sim\InGameEvents\TimePoint.cs" />
+    <Compile Include="Sim\IObservable.cs" />
+    <Compile Include="Sim\IOwnable.cs" />
+    <Compile Include="Sim\IOwner.cs" />
+    <Compile Include="Sim\IQuad.cs" />
+    <Compile Include="Sim\Items\Ammunition.cs" />
+    <Compile Include="Sim\Items\AmmunitionType.cs" />
+    <Compile Include="Sim\Items\Carcass.cs" />
+    <Compile Include="Sim\Items\CarcassType.cs" />
+    <Compile Include="Sim\Items\Composite.cs" />
+    <Compile Include="Sim\Items\DegradeManager.cs" />
+    <Compile Include="Sim\Items\DegradeType.cs" />
+    <Compile Include="Sim\Items\Food.cs" />
+    <Compile Include="Sim\Items\FoodNutrientAmount.cs" />
+    <Compile Include="Sim\Items\FoodNutrientProfile.cs" />
+    <Compile Include="Sim\Items\FoodNutrientType.cs" />
+    <Compile Include="Sim\Items\FoodType.cs" />
+    <Compile Include="Sim\Items\FuelType.cs" />
+    <Compile Include="Sim\Items\IComposite.cs" />
+    <Compile Include="Sim\Items\Item.cs" />
+    <Compile Include="Sim\Items\ItemCategory.cs" />
+    <Compile Include="Sim\Items\ItemType.cs" />
+    <Compile Include="Sim\Items\LookUpIComposites.cs" />
+    <Compile Include="Sim\Items\Meal.cs" />
+    <Compile Include="Sim\Items\MealType.cs" />
+    <Compile Include="Sim\Items\PowerCell.cs" />
+    <Compile Include="Sim\Items\StorageDuration.cs" />
+    <Compile Include="Sim\Items\Tool.cs" />
+    <Compile Include="Sim\Items\Weapon.cs" />
+    <Compile Include="Sim\Items\WeaponType.cs" />
+    <Compile Include="Sim\Jobs\AttackAreaJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sim\Jobs\AttackJob.cs" />
+    <Compile Include="Sim\Jobs\BuildingJob.cs" />
+    <Compile Include="Sim\Jobs\CheckProcessJob.cs" />
+    <Compile Include="Sim\Jobs\CombatAreaJob.cs" />
+    <Compile Include="Sim\Jobs\CombatInfo.cs" />
+    <Compile Include="Sim\Jobs\FindPreyJob.cs" />
+    <Compile Include="Sim\Jobs\HarvestJob.cs" />
+    <Compile Include="Sim\Jobs\HaulingJob.cs" />
+    <Compile Include="Sim\Jobs\HaulingJobAnyItemOfType.cs" />
+    <Compile Include="Sim\Jobs\HaulingJobManager.cs" />
+    <Compile Include="Sim\Jobs\HaulingJobSpecificItem.cs" />
+    <Compile Include="Sim\Jobs\HuntingJob.cs" />
+    <Compile Include="Sim\Jobs\HuntingJobManager.cs" />
+    <Compile Include="Sim\Jobs\IRequiresWeapon.cs" />
+    <Compile Include="Sim\Jobs\IVariableMaxTakerJob.cs" />
+    <Compile Include="Sim\Jobs\Job.cs" />
+    <Compile Include="Sim\Jobs\JobManager.cs" />
+    <Compile Include="Sim\Jobs\JobTypes\JobType.cs" />
+    <Compile Include="Sim\Jobs\JobTypes\ProcessJobType.cs" />
+    <Compile Include="Sim\Jobs\JobTypes\StaticJobType.cs" />
+    <Compile Include="Sim\Jobs\LightFireJob.cs" />
+    <Compile Include="Sim\Jobs\MissionJob.cs" />
+    <Compile Include="Sim\Jobs\OtherJobManager.cs" />
+    <Compile Include="Sim\Jobs\PatrolJob.cs" />
+    <Compile Include="Sim\Jobs\ProcessJob.cs" />
+    <Compile Include="Sim\Jobs\ProductionPlan.cs" />
+    <Compile Include="Sim\Jobs\ProductionToolType.cs" />
+    <Compile Include="Sim\Jobs\RepairJob.cs" />
+    <Compile Include="Sim\Jobs\ReplenishJob.cs" />
+    <Compile Include="Sim\Jobs\SalvageJob.cs" />
+    <Compile Include="Sim\Jobs\ScoutingJob.cs" />
+    <Compile Include="Sim\Jobs\StokeFireJob.cs" />
+    <Compile Include="Sim\Jobs\TakenBy.cs" />
+    <Compile Include="Sim\Jobs\ThreatJob.cs" />
+    <Compile Include="Sim\Jobs\ThreatJobManager.cs" />
+    <Compile Include="Sim\Jobs\UpgradeJob.cs" />
+    <Compile Include="Sim\KVP.cs" />
+    <Compile Include="Sim\Map\DiscomfortMap.cs" />
+    <Compile Include="Sim\Map\FireMap.cs" />
+    <Compile Include="Sim\Map\HillsType.cs" />
+    <Compile Include="Sim\Map\IMap.cs" />
+    <Compile Include="Sim\Map\IMapCounter.cs" />
+    <Compile Include="Sim\Map\InfluenceMap.cs" />
+    <Compile Include="Sim\Map\Layer.cs" />
+    <Compile Include="Sim\Map\LookUpMap.cs" />
+    <Compile Include="Sim\Map\MapArea.cs" />
+    <Compile Include="Sim\Map\MapEditor\BiologicalEntity.cs" />
+    <Compile Include="Sim\Map\MapEditor\EntityData.cs" />
+    <Compile Include="Sim\Map\MapEditor\MapData.cs" />
+    <Compile Include="Sim\Map\MapEditor\MapLoader.cs" />
+    <Compile Include="Sim\Map\MapEditor\Person.cs" />
+    <Compile Include="Sim\Map\MapEditor\Resource.cs" />
+    <Compile Include="Sim\Map\MapEditor\Rock.cs" />
+    <Compile Include="Sim\Map\MapEditor\Threat.cs" />
+    <Compile Include="Sim\Map\MapEditor\Tile.cs" />
+    <Compile Include="Sim\Map\MapEditor\Tree.cs" />
+    <Compile Include="Sim\Map\MapManager.cs" />
+    <Compile Include="Sim\Map\MovementMap.cs" />
+    <Compile Include="Sim\Map\PlainsType.cs" />
+    <Compile Include="Sim\Map\PlantResourceNeeds.cs" />
+    <Compile Include="Sim\Map\Region.cs" />
+    <Compile Include="Sim\Map\RegionEdge.cs" />
+    <Compile Include="Sim\Map\RegionMap.cs" />
+    <Compile Include="Sim\Map\RegionMapManager.cs" />
+    <Compile Include="Sim\Map\RegionSearchRequest.cs" />
+    <Compile Include="Sim\Map\Regions\DependentRegionMap.cs" />
+    <Compile Include="Sim\Map\Regions\TerrainRegionMap.cs" />
+    <Compile Include="Sim\Map\Sector.cs" />
+    <Compile Include="Sim\Map\Stockpile.cs" />
+    <Compile Include="Sim\Map\SubtileInfluence.cs" />
+    <Compile Include="Sim\Map\SubtileLayer.cs" />
+    <Compile Include="Sim\Map\SubtileLayers.cs" />
+    <Compile Include="Sim\Map\SubtileSector.cs" />
+    <Compile Include="Sim\Map\SubtileValueArray.cs" />
+    <Compile Include="Sim\Map\SurfaceType.cs" />
+    <Compile Include="Sim\Map\Terrain.cs" />
+    <Compile Include="Sim\Map\TerrainBatch.cs" />
+    <Compile Include="Sim\Map\TerrainTile.cs" />
+    <Compile Include="Sim\Map\TerrainTileUpdateManager.cs" />
+    <Compile Include="Sim\Map\ThreatMap.cs" />
+    <Compile Include="Sim\Map\ThreatSource.cs" />
+    <Compile Include="Sim\Map\TileLayer.cs" />
+    <Compile Include="Sim\Map\TileSector.cs" />
+    <Compile Include="Sim\Map\WaterType.cs" />
+    <Compile Include="Sim\Map\Zone.cs" />
+    <Compile Include="Sim\Map\ZoneHunt.cs" />
+    <Compile Include="Sim\ObservableList.cs" />
+    <Compile Include="Sim\Overland\Locations\DistanceCalculator.cs" />
+    <Compile Include="Sim\Overland\Locations\Double.cs" />
+    <Compile Include="Sim\Overland\Locations\GaussKruger.cs" />
+    <Compile Include="Sim\Overland\Locations\GeodeticCoordinate.cs" />
+    <Compile Include="Sim\Overland\Locations\GridCoordinate.cs" />
+    <Compile Include="Sim\Overland\Locations\Projections\Ellipsoid.cs" />
+    <Compile Include="Sim\Overland\Locations\Projections\Projection.cs" />
+    <Compile Include="Sim\Overland\Missions\BuySellAction.cs" />
+    <Compile Include="Sim\Overland\Missions\Contract.cs" />
+    <Compile Include="Sim\Overland\Missions\DisembarkAction.cs" />
+    <Compile Include="Sim\Overland\Missions\EmbarkAction.cs" />
+    <Compile Include="Sim\Overland\Missions\LoadAction.cs" />
+    <Compile Include="Sim\Overland\Missions\Mission.cs" />
+    <Compile Include="Sim\Overland\Missions\MissionAction.cs" />
+    <Compile Include="Sim\Overland\Missions\MissionActions.cs" />
+    <Compile Include="Sim\Overland\Missions\MissionLocation.cs" />
+    <Compile Include="Sim\Overland\Missions\SellAction.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\BuySellActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\ContractTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\DisembarkActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\EmbarkActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\LoadActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\MissionActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\MissionLocationTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\MissionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\PassengerListTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\TransportationTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\TravelActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Templates\UnloadActionTemplate.cs" />
+    <Compile Include="Sim\Overland\Missions\Transportation.cs" />
+    <Compile Include="Sim\Overland\Missions\TravelAction.cs" />
+    <Compile Include="Sim\Overland\Missions\UnloadAction.cs" />
+    <Compile Include="Sim\Overland\OtherSiteAllegianceManager.cs" />
+    <Compile Include="Sim\Overland\Overland.cs" />
+    <Compile Include="Sim\Overland\PlaySite.cs" />
+    <Compile Include="Sim\Overland\Route.cs" />
+    <Compile Include="Sim\Overland\RouteData.cs" />
+    <Compile Include="Sim\Overland\Site.cs" />
+    <Compile Include="Sim\Overland\SiteData.cs" />
+    <Compile Include="Sim\Overland\Templates\AllegianceTemplate.cs" />
+    <Compile Include="Sim\Overland\Templates\ExpeditionTemplate.cs" />
+    <Compile Include="Sim\Overland\Templates\SiteTemplate.cs" />
+    <Compile Include="Sim\Overland\TravelLocation.cs" />
+    <Compile Include="Sim\Overland\World.cs" />
+    <Compile Include="Sim\Overland\WorldData.cs" />
+    <Compile Include="Sim\PlaceGameEntities.cs" />
+    <Compile Include="Sim\PoissonDisc.cs" />
+    <Compile Include="Sim\Policies\ExpeditionPolicy.cs" />
+    <Compile Include="Sim\Policies\ExpeditionPolicyData.cs" />
+    <Compile Include="Sim\Policies\Policy.cs" />
+    <Compile Include="Sim\Policies\PolicyData.cs" />
+    <Compile Include="Sim\Policies\TierOrArea.cs" />
+    <Compile Include="Sim\Policies\TierOrAreaType.cs" />
+    <Compile Include="Sim\Pool.cs" />
+    <Compile Include="Sim\Processes\IKnownProcess.cs" />
+    <Compile Include="Sim\Processes\Input.cs" />
+    <Compile Include="Sim\Processes\NeedSatisfaction.cs" />
+    <Compile Include="Sim\Processes\Output.cs" />
+    <Compile Include="Sim\Processes\ProcessMemory.cs" />
+    <Compile Include="Sim\Processes\ProcessToolSet.cs" />
+    <Compile Include="Sim\Processes\ProcessType.cs" />
+    <Compile Include="Sim\Processes\Productivity.cs" />
+    <Compile Include="Sim\Processes\ProgressFactorProperty.cs" />
+    <Compile Include="Sim\Processes\SimProcess.cs" />
+    <Compile Include="Sim\Processes\Tool.cs" />
+    <Compile Include="Sim\Processes\ToolAlternatives.cs" />
+    <Compile Include="Sim\Processes\ToolTypeCombination.cs" />
+    <Compile Include="Sim\Progress.cs" />
+    <Compile Include="Sim\Regulator.cs" />
+    <Compile Include="Sim\Research\Knowledge.cs" />
+    <Compile Include="Sim\Research\KnowledgeType.cs" />
+    <Compile Include="Sim\Resources\Crop.cs" />
+    <Compile Include="Sim\Resources\CropItem.cs" />
+    <Compile Include="Sim\Resources\CropType.cs" />
+    <Compile Include="Sim\Resources\IResourceItem.cs" />
+    <Compile Include="Sim\Resources\IResourceItemContainer.cs" />
+    <Compile Include="Sim\Resources\ResourceCategory.cs" />
+    <Compile Include="Sim\Resources\ResourceContainer.cs" />
+    <Compile Include="Sim\Resources\ResourceContainerFactory.cs" />
+    <Compile Include="Sim\Resources\ResourceItem.cs" />
+    <Compile Include="Sim\Resources\ResourceReplenish.cs" />
+    <Compile Include="Sim\Resources\ResourceType.cs" />
+    <Compile Include="Sim\Resources\TileResourceContainer.cs" />
+    <Compile Include="Sim\Resources\TileResourceItem.cs" />
+    <Compile Include="Sim\Resources\TileResourceType.cs" />
+    <Compile Include="Sim\Scenarios\CustomDifficulty.cs" />
+    <Compile Include="Sim\Scenarios\Difficulty.cs" />
+    <Compile Include="Sim\Scenarios\Option.cs" />
+    <Compile Include="Sim\Scenarios\OptionSet.cs" />
+    <Compile Include="Sim\Scenarios\Scenario.cs" />
+    <Compile Include="Sim\Scenarios\ScenarioData.cs" />
+    <Compile Include="Sim\Scenarios\StartGameParams.cs" />
+    <Compile Include="Sim\SetMember.cs" />
+    <Compile Include="Sim\Sim.cs" />
+    <Compile Include="Sim\Snapshot\CRC.cs" />
+    <Compile Include="Sim\Snapshot\DelegateLookup.cs" />
+    <Compile Include="Sim\Snapshot\ILookup.cs" />
+    <Compile Include="Sim\Snapshot\ILookUpCollectible.cs" />
+    <Compile Include="Sim\Snapshot\ISnapshot.cs" />
+    <Compile Include="Sim\Snapshot\LookUp.cs" />
+    <Compile Include="Sim\Snapshot\LookUpSortedDictionary.cs" />
+    <Compile Include="Sim\Snapshot\Snapshot.cs" />
+    <Compile Include="Sim\Snapshot\SnapshotHeader.cs" />
+    <Compile Include="Sim\Soil\RenderAsRocksType.cs" />
+    <Compile Include="Sim\Soil\RenderedTerrainComponent.cs" />
+    <Compile Include="Sim\Soil\SoilComponent.cs" />
+    <Compile Include="Sim\Soil\SoilComponentType.cs" />
+    <Compile Include="Sim\Systems\EntityQuadTree.cs" />
+    <Compile Include="Sim\Systems\EntityQuadTreeNode.cs" />
+    <Compile Include="Sim\Systems\ISleepingUpdatable.cs" />
+    <Compile Include="Sim\Systems\NoiseParams.cs" />
+    <Compile Include="Sim\Systems\PointQuadTree.cs" />
+    <Compile Include="Sim\Systems\PointQuadTreeNode.cs" />
+    <Compile Include="Sim\Systems\SleepyUpdater.cs" />
+    <Compile Include="Sim\Systems\SleepyUpdaterLookUp.cs" />
+    <Compile Include="Sim\Systems\TimeSlicing\Cyclable.cs" />
+    <Compile Include="Sim\Systems\TimeSlicing\CycleManager.cs" />
+    <Compile Include="Sim\Systems\TimeSlicing\ICyclable.cs" />
+    <Compile Include="Sim\Systems\TreeDweller.cs" />
+    <Compile Include="Sim\Systems\Triggers\Interest.cs" />
+    <Compile Include="Sim\Systems\Triggers\Trigger.cs" />
+    <Compile Include="Sim\Systems\Triggers\TriggerSystem.cs" />
+    <Compile Include="Sim\Systems\Triggers\TriggerType.cs" />
+    <Compile Include="Sim\Tiers\AreaTier.cs" />
+    <Compile Include="Sim\Tiers\TierType.cs" />
+    <Compile Include="Sim\Trade\OfferDemandProfile.cs" />
+    <Compile Include="Sim\Trade\OfferDemandState.cs" />
+    <Compile Include="Sim\Trade\PricesProfile.cs" />
+    <Compile Include="Sim\Trade\PriceType.cs" />
+    <Compile Include="Sim\Trade\StructuresProfile.cs" />
+    <Compile Include="Sim\Trade\TradeAmount.cs" />
+    <Compile Include="Sim\Trade\TradeAmountType.cs" />
+    <Compile Include="Sim\Trade\TradeAmountTypes.cs" />
+    <Compile Include="Sim\Trade\TradeGroup.cs" />
+    <Compile Include="Sim\Trade\TradeManager.cs" />
+    <Compile Include="Sim\Trade\TradeProfile.cs" />
+    <Compile Include="Sim\Trade\VehiclesForHireAmount.cs" />
+    <Compile Include="Sim\Trade\VehiclesForHireType.cs" />
+    <Compile Include="Sim\Trade\VehiclesProfile.cs" />
+    <Compile Include="Sim\Trees\HasCrops.cs" />
+    <Compile Include="Sim\Trees\IHasCrops.cs" />
+    <Compile Include="Sim\Trees\IPlantType.cs" />
+    <Compile Include="Sim\Trees\LookUpIHasCrops.cs" />
+    <Compile Include="Sim\Trees\Tree.cs" />
+    <Compile Include="Sim\Trees\TreeType.cs" />
+    <Compile Include="Sim\UnclaimedWorld.cs" />
+    <Compile Include="Sim\UserSettings.cs" />
+    <Compile Include="Sim\Vegetation\LowVegetation.cs" />
+    <Compile Include="Sim\Vegetation\LowVegetationType.cs" />
+    <Compile Include="Sim\Vegetation\RenderedTerrainType.cs" />
+    <Compile Include="Sim\Vehicles\Aircraft.cs" />
+    <Compile Include="Sim\Vehicles\AircraftType.cs" />
+    <Compile Include="Sim\Vehicles\CargoSlot.cs" />
+    <Compile Include="Sim\Vehicles\CargoSlotType.cs" />
+    <Compile Include="Sim\Vehicles\DriversSlot.cs" />
+    <Compile Include="Sim\Vehicles\Passenger.cs" />
+    <Compile Include="Sim\Vehicles\PassengerOrCargoSlot.cs" />
+    <Compile Include="Sim\Vehicles\PassengerOrCargoSlotType.cs" />
+    <Compile Include="Sim\Vehicles\PassengerSlot.cs" />
+    <Compile Include="Sim\Vehicles\PassengerSlotType.cs" />
+    <Compile Include="Sim\Vehicles\Vehicle.cs" />
+    <Compile Include="Sim\Vehicles\VehicleType.cs" />
+    <Compile Include="Sim\Weather.cs" />
+    <Compile Include="Sim\XmlCollections\SerializableHashSet.cs" />
+    <Compile Include="Sim\XmlCollections\SerializableDictionary.cs" />
+    <Compile Include="Sim\XmlCollections\SerializableGenerics.cs" />
+    <Compile Include="Sim\XmlCollections\SerializableQueue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\content readme.txt" />
+    <Content Include="CSteamworks.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSteamworks64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Maps\o Mountain Pass\Soil\vulcanic.png" />
+    <Content Include="data\\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.ico" />
+    <Content Include="Sim\Game.ico" />
+    <Content Include="Sim\GameThumbnail.png" />
+    <Content Include="steam_api.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="steam_api64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="steam_appid.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Content\Content - with models.mgcb.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Quantity\" />
+    <Folder Include="Sim\AllGameData\Maps\Island\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Windows.csproj">
+      <Project>{7de47032-a904-4c29-bd22-2d235e8d91ba}</Project>
+      <Name>MonoGame.Framework.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnimationComponentRuntime\AnimationComponentRuntime.csproj">
+      <Project>{5c7b14eb-2637-4df5-a7b0-2a0d65bacc0a}</Project>
+      <Name>AnimationComponentRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InputEventSystem\InputEventSystem.csproj">
+      <Project>{ad06bef8-9e35-4c57-ad52-cdf21de9937b}</Project>
+      <Name>InputEventSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoundLines\RoundLine.csproj">
+      <Project>{75544006-f436-4ead-962d-56a3c0aeb06e}</Project>
+      <Name>RoundLine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpriteSheetRuntime\SpriteSheetRuntime.csproj">
+      <Project>{2418d7dd-b591-4cfd-8b58-b3f32bfc097f}</Project>
+      <Name>SpriteSheetRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Steamworks.NET\Standalone\Steamworks.NET.csproj">
+      <Project>{b3543600-587c-4fdc-994a-cb0bdc629a7e}</Project>
+      <Name>Steamworks.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowSystem\WindowSystem.csproj">
+      <Project>{b6147e9b-3e10-4771-91d8-c23156a2d927}</Project>
+      <Name>WindowSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

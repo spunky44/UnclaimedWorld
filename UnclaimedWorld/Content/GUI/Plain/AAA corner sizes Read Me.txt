@@ -1,0 +1,12 @@
+updated 19/3 2015:
+
+infopanel: corner size 116x116
+
+rosterpanel_base: corner size 242x242
+
+
+
+
+updated 25/3 2015:
+
+optionspanel_base: corner 111x111

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<XnaContent>  
+	<Asset Type="System.String[]">   
+    <Item>GUI\Comm\</Item>
+    <Item>GUI\Plain\</Item>
+    <Item>GUI\Minimap\</Item> 
+    <Item>GUI\Status screen\</Item>      
+    <Item>GUI\LCD Controls\</Item> 
+    <Item>GUI\Help Images\</Item> 
+    <Item>GUI\Main panel\</Item>    
+    <Item>GUI\Metal panel\</Item>        
+    <Item>GUI\Big CRT\</Item>     
+    <Item>GUI\HUD windows\</Item>   
+    <Item>GUI\HUD windows\Type thumbnails\</Item>   
+    <Item>GUI\Map GUI\</Item>     
+    <Item>GUI\Main menu\</Item>         
+    <Item>GUI\DateAndWeather\</Item>          
+    <Item>GUI\Type Icons\</Item> 
+    <Item>GUI\Policy screen\</Item>   
+    <Item>GUI\Twitter Panel\</Item>          
+    <Item>GUI\Ratings Counter Panels\</Item>        
+    <Item>GUI\Create Mission\</Item>        
+    <Item>itemBillboards\</Item>          
+  </Asset>                                           
+</XnaContent>       
+                                             
+                                                                                                                                                                                                                                                                                         

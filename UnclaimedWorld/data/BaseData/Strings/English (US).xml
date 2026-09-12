@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfString>
+  <String>
+    <Key>MyKey</Key>
+    <Value>MyValue</Value>
+  </String>
+  <String>
+    <Key>(GUI)Click to customize the data shown in the summary panel.</Key>
+    <Value>Click to customize the data shown in the summary panel.</Value>
+  </String>
+  <String>
+    <Key>(GUI)Closes the panel.</Key>
+    <Value>Closes the panel.</Value>
+  </String>
+  <String> 
+    <Key>(GUI)CUSTOMIZE</Key>
+    <Value>CUSTOMIZE</Value>
+  </String>
+</ArrayOfString>

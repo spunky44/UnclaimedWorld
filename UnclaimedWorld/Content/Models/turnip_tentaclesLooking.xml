@@ -1,0 +1,30 @@
+<root>
+  <includebones>
+
+
+    <name>Tentacle1A</name>
+    <name>Tentacle1B</name>
+    <name>Tentacle1C</name>
+    <name>Tentacle1D</name>
+    <name>Tentacle1E</name>
+
+    <name>Tentacle2A</name>
+    <name>Tentacle2B</name>
+    <name>Tentacle2C</name>
+    <name>Tentacle2D</name>
+    <name>Tentacle2E</name>
+
+    <name>Tentacle3A</name>
+    <name>Tentacle3B</name>
+    <name>Tentacle3C</name>
+    <name>Tentacle3D</name>
+    <name>Tentacle3E</name>
+
+    <name>Tentacle4A</name>
+    <name>Tentacle4B</name>
+    <name>Tentacle4C</name>
+    <name>Tentacle4D</name>
+    <name>Tentacle4E</name>
+
+  </includebones>
+</root>

@@ -1,0 +1,19 @@
+<root>
+  <includebones>
+    <name>Neck</name>
+    <name>Head</name>
+    <name>TentacleRightA</name>
+    <name>TentacleRightB</name>
+    <name>TentacleRightC</name>
+    <name>TentacleRightD</name>
+    <name>TentacleRightEnd</name>
+    <name>TentacleLeftA</name>
+    <name>TentacleLeftB</name>
+    <name>TentacleLeftC</name>
+    <name>TentacleLeftD</name>
+    <name>TentacleLeftEnd</name>
+    <name>TailA</name>
+    <name>TailB</name>
+    <name>TailEnd</name>
+  </includebones>
+</root>

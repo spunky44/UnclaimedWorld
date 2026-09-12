@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Framework:Curve">
+    <PreLoop>Constant</PreLoop>
+    <PostLoop>Constant</PostLoop>
+    <Keys>
+      <!-- float position, float value, float tangentIn, float tangentOut, CurveContinuity continuity -->
+      <CurveKey>     
+        <Position>-4.5</Position>
+        <Value>230</Value>
+        <TangentIn>0</TangentIn>
+        <TangentOut>0</TangentOut>
+        <Continuity>Smooth</Continuity>         
+      </CurveKey>
+      <CurveKey>
+        <Position>0.61</Position>
+        <Value>230</Value>
+        <TangentIn>0</TangentIn>
+        <TangentOut>0</TangentOut>
+        <Continuity>Smooth</Continuity>
+      </CurveKey>
+      <CurveKey>
+        <Position>77</Position>
+        <Value>0</Value>
+        <TangentIn>0</TangentIn>
+        <TangentOut>0</TangentOut>
+        <Continuity>Smooth</Continuity>
+      </CurveKey>
+      <CurveKey>
+        <Position>191</Position>
+        <Value>0</Value>
+        <TangentIn>0</TangentIn>
+        <TangentOut>0</TangentOut>
+        <Continuity>Smooth</Continuity>
+      </CurveKey>
+      <CurveKey>
+        <Position>234.606</Position>
+        <Value>61.751</Value>
+        <TangentIn>165.362167</TangentIn>
+        <TangentOut>64.63784</TangentOut>
+        <Continuity>Smooth</Continuity>
+      </CurveKey>
+      <CurveKey>
+        <Position>251.651</Position>
+        <Value>230</Value>
+        <TangentIn>0</TangentIn>
+        <TangentOut>0</TangentOut>
+        <Continuity>Smooth</Continuity>
+      </CurveKey>
+    </Keys>
+  </Asset>
+</XnaContent>

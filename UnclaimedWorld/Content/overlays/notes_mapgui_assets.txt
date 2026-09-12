@@ -1,0 +1,2 @@
+mapgui_zone_base:
+corner size: 10 px

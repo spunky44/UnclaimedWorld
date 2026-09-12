@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>  
+	<Asset Type="System.String[]">   
+    <Item>tiles\</Item>
+    <Item>structureBillboardsConstructAndBurnt\</Item>
+    <Item>structureBillboards\</Item> 
+    <Item>terrainBillboards\</Item>
+    <Item>overlays\</Item>     
+    <Item>spriteEffects\</Item>          
+  </Asset>          
+</XnaContent>                  
+                                                                                                                                                                                                                                                                                                                                                         

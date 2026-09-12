@@ -1,0 +1,3 @@
+HUD window base:
+corner size: 47 px
+opacity: 75%

@@ -1,0 +1,10 @@
+<root>
+  <includebones>
+    <name>ShoulderRight</name>
+    <name>UpperArmRight</name>
+    <name>ForeArmRight</name>
+    <name>PalmRight</name>
+    <name>FingerRightA</name>
+    <name>FingerRightEnd</name>
+  </includebones>
+</root>
