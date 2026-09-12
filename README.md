@@ -6,7 +6,7 @@ Built using MonoGame.
 For permissions and licensing information, see the LICENSE file.
 
 
-# How to build Unclaimed World
+# How to build Unclaimed World for the first time
 The project relies on an old fork of MonoGame:
 https://github.com/spunky44/MonoGame
 
