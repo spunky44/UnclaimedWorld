@@ -54,7 +54,7 @@ and "Unclaimed World Deluxe".
 You may use the Unclaimed World logo as it appears in the original game.
 
 You may not modify or use the name, logo, or other branding in a manner that
-suggests that Refactored Games officially endorses, publishes, maintains,
+suggests that Refactored Games (Morten Pedersen) officially endorses, publishes, maintains,
 supports, or is otherwise responsible for the derivative project.
 
 4. NO ENDORSEMENT OR WARRANTY
@@ -89,7 +89,7 @@ Materials.
 
 7. THIRD-PARTY MATERIALS
 
-This license applies only to materials that Refactored Games has the right
+This license applies only to materials that Refactored Games (Morten Pedersen) has the right
 to license under these terms.
 
 Third-party software, libraries, assets, fonts, music, middleware, or other
@@ -114,7 +114,7 @@ violate its terms.
 10. NO WARRANTY
 
 THE ORIGINAL MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, REFACTORED GAMES
+EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, REFACTORED GAMES (MORTEN PEDERSEN)
 DISCLAIMS ALL WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS
 FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
