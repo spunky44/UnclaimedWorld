@@ -9,7 +9,7 @@ identified as being released under this license by Refactored Games (Morten Pede
 
 1. GRANT OF RIGHTS
 
-Refactored Games grants you a worldwide, royalty-free, non-exclusive license
+Refactored Games (Morten Pedersen) grants you a worldwide, royalty-free, non-exclusive license
 to:
 
 - use, copy, study, and modify the Original Materials;
