@@ -4,7 +4,7 @@ Version 1.0
 Copyright © 2016–2026 Refactored Games (Morten Pedersen)
 
 This license applies to the source code, game assets, and other materials
-identified as being released under this license by Refactored Games
+identified as being released under this license by Refactored Games (Morten Pedersen)
 ("the Original Materials").
 
 1. GRANT OF RIGHTS
