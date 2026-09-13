@@ -22,3 +22,9 @@ Remove-Item -Recurse -Force .\ThirdParty\NVorbis -ErrorAction SilentlyContinue
 git submodule update --init --recursive
 
 .\Protobuild.exe --generate Windows
+
+Then install the old MonoGame SDK 3.6 from:
+https://github.com/MonoGame/MonoGame/releases?page=5#release-v3.6
+
+
+Note: Content pipelines are not currently working (WIP).
