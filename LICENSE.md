@@ -146,8 +146,8 @@ For permission to use the Original Materials commercially, or for other
 uses not permitted by this license, contact:
 
 Refactored Games
-larsped@gmail.com
-mortendesign@hotmail.com
+larsped at gmail.com
+mortendesign at hotmail.com
 
 ---
 
